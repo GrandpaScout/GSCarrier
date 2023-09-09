@@ -49,8 +49,8 @@ Carrier.vehicle.newSeat("Name", models.model_name.path.to.part, {
     -- return a number to change the priority of this sear for this entity.
     -- return nothing to leave the priority alone.
 
-    -- No matter what, there is a hidden condition that always returns `false` if the part this seat is connected to
-    -- does not exist or is invisible.
+    -- No matter what, there is a hidden condition that always returns `false` if the part this seat
+    -- is connected to does not exist or is invisible.
   end
 })
 ```
@@ -113,7 +113,8 @@ Carrier.rider.setScale(1.23)
 Get the current vehicle and seat (if any) with the following functions:
 ```lua
 -- May return `nil` if there is no vehicle.
--- Will return a different value than `player:getVehicle()` if you are being redirected by a Carrier vehicle.
+-- Will return a different value than `player:getVehicle()` if you are being redirected by
+-- a Carrier vehicle.
 local vehicle = Carrier.rider.getVehicle()
 
 -- May return `nil` if there is no seat.

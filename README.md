@@ -3,6 +3,10 @@
 A Figura Library that allows avatars to reposition the players sitting on them. It even supports multiple passengers at
 a time and passengers in vehicles you are controlling.
 
+> [!WARNING]  
+> Tags are a work-in-progress feature and may change as this library is updated to version `1.0.0`.  
+> It is not recommended to use them unless you understand that they will change!
+
 
 ## Intallation
 

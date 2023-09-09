@@ -6,7 +6,7 @@
 -- │ └─┐ └─────┘└─────┘ ┌─┘ │ --
 -- └───┘                └───┘ --
 ---@module  "Passenger Pivot Library (Rider Only)" <GSCarrier_RiderOnly>
----@version v0.9.1
+---@version v0.9.2
 ---@see     GrandpaScout @ https://github.com/GrandpaScout
 -- 
 
@@ -27,7 +27,7 @@
 --]] =======================================================================
 
 local ID = "GSCarrier_RiderOnly"
-local VER = "0.9.1"
+local VER = "0.9.2"
 local FIG = {"0.1.2", "0.1.2"}
 
 
@@ -46,6 +46,7 @@ local VEC_UP = vec(0, 1, 0)
 local NP_OFF = vec(0, 0.5, 0)
 
 local internal_tags = {
+  ["gscarrier:cem"] = true,
   ["gscarrier:player"] = true,
   ["gscarrier:scale"] = true,
   ["pehkui:scale"] = true,
@@ -300,6 +301,11 @@ rider.controller = ridercon
 
 ---===|| EVENTS ||===================================================================================================---
 
+events.ENTITY_INIT:register(function()
+  rider_tags[user:isPlayer() and "gscarrier:player" or "gscarrier:cem"] = true
+  avatar:store("GSCarrier:rider.Tags", rider_tags)
+end)
+
 ---@type Entity.any?
 local actual_vehicle
 
@@ -519,172 +525,8 @@ end, "GSCarrier:Render_TheMagic")
 do return setmetatable(this, thismt) end
 
 
----Tags that explain the function and shape of a vehicle.  
----These can be used by riders to determine which animation to play, for example.
----
----You are not limited to the tags in this list.  
----If you want to add a tag of your own, use the format `author:tag_name`
----
----Usage of conflicting tags results in behavior defined by the riders, but should be avoided.
+---@diagnostic disable: duplicate-doc-alias
+
 ---@alias Lib.GS.Carrier.vehicleTag string
----**[CLASS]** *(Internal)*
----***
----This vehicle is a player.
----
----This tag is always applied to player vehicles.
----| "gscarrier:player"
----
----
----
----**[BODY]**
----***
----This vehicle has a vertical posture.  
----This is mostly orthogrades.
----
----*Conflicts with:*
----> `gscarrier:horizontal` `gscarrier:taur`
----| "gscarrier:vertical"
----**[BODY]**
----***
----This vehicle has a horizontal posture.  
----This also includes pronogrades.
----
----*Conflicts with:*
----> `gscarrier:vertical` `gscarrier:taur`
----| "gscarrier:horizontal"
----**[BODY]**
----***
----This vehicle is taur-like.
----
----*Conflicts with:*
----> `gscarrier:vertical` `gscarrier:horizontal`
----| "gscarrier:taur"
----
----
----
----**[SPECIES]**
----***
----This is a placeholder for a tag group that may exist later.
----
----Do not use this tag.
----| "gscarrier:placeholder1"
----
----
----
----**[DOMAIN]**
----***
----This vehicle can travel on land.
----| "gscarrier:land"
----**[DOMAIN]**
----***
----This vehicle can travel on water.
----| "gscarrier:water"
----**[DOMAIN]**
----***
----This vehicle can travel in water.
----| "gscarrier:underwater"
----**[DOMAIN]**
----***
----This vehicle can travel through air.
----| "gscarrier:air"
-
-
 ---@alias Lib.GS.Carrier.seatTag string
----**[HEIGHT]**
----***
----This seat is high up.
----
----*Conflicts with:*
----> `gscarrier:low`
----| "gscarrier:high"
----**[HEIGHT]**
----***
----This seat is low to the ground.
----
----*Conflicts with:*
----> `gscarrier:high`
----| "gscarrier:low"
----
----
----
----**[TYPE]**
----***
----The legs have room to hang down like a chair.
----
----*Conflicts with:*
----> `gscarrier:flat` `gscarrier:piggyback`
----| "gscarrier:chair"
----**[TYPE]**
----***
----The seat is on a flat surface.
----
----*Conflicts with:*
----> `gscarrier:chair` `gscarrier:piggyback`
----| "gscarrier:flat"
----**[TYPE]**
----***
----The seat is carried on the back.  
----Meant to be used for more upright models.
----
----*Conflicts with:*
----> `gscarrier:flat` `gscarrier:chair`
----| "gscarrier:piggyback"
-
 ---@alias Lib.GS.Carrier.riderTag string
----**[INTERNAL]**
----***
----This rider is a player.
----
----This tag is always applied to player riders.
----| "gscarrier:player"
----
----
----
----**[BODY]**
----***
----This rider has a vertical posture.  
----This is mostly orthogrades.
----
----*Conflicts with:*
----> `gscarrier:horizontal` `gscarrier:taur`
----| "gscarrier:vertical"
----**[BODY]**
----***
----This rider has a horizontal posture.  
----This does *not* include pronogrades.
----
----*Conflicts with:*
----> `gscarrier:vertical` `gscarrier:taur`
----| "gscarrier:horizontal"
----**[BODY]**
----***
----This rider is taur-like.
----
----*Conflicts with:*
----> `gscarrier:vertical` `gscarrier:horizontal`
----| "gscarrier:taur"
----
----
----
----**[SPECIES]**
----***
----This is a placeholder for a tag group that may exist later.
----
----Do not use this tag.
----| "gscarrier:placeholder1"
----
----
----
----**[SIZE]** *(Internal)*
----***
----The scale of this rider relative to Steve.
----
----*If you are using Pehkui, this should be relative to the size that a Steve the same scale as you would be.*
----| "gscarrier:scale"
----
----
----
----**[PEHKUI]** *(Internal)*
----***
----Contains the pehkui scale of this rider.
----| "pehkui:scale"

@@ -6,7 +6,7 @@
 -- │ └─┐ └─────┘└─────┘ ┌─┘ │ --
 -- └───┘                └───┘ --
 ---@module  "Passenger Pivot Library (Rider Only)" <GSCarrier_RiderOnly>
----@version v0.9.0
+---@version v0.9.1
 ---@see     GrandpaScout @ https://github.com/GrandpaScout
 -- 
 
@@ -27,7 +27,7 @@
 --]] =======================================================================
 
 local ID = "GSCarrier_RiderOnly"
-local VER = "0.9.0"
+local VER = "0.9.1"
 local FIG = {"0.1.2", "0.1.2"}
 
 

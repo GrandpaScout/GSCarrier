@@ -6,7 +6,7 @@
 -- │ └─┐ └─────┘└─────┘ ┌─┘ │ --
 -- └───┘                └───┘ --
 ---@module  "Passenger Pivot Library (Vehicle Only)" <GSCarrier_VehicleOnly>
----@version v0.9.0
+---@version v0.9.1
 ---@see     GrandpaScout @ https://github.com/GrandpaScout
 -- 
 
@@ -27,7 +27,7 @@
 --]] =======================================================================
 
 local ID = "GSCarrier_VehicleOnly"
-local VER = "0.9.0"
+local VER = "0.9.1"
 local FIG = {"0.1.2", "0.1.2"}
 
 
@@ -425,7 +425,7 @@ events.TICK:register(function()
         end
       end
     end
-    if update_seats then avatar:store("GSCarrier:vehicle.Seats", veh_seats) end
+    if update_seats then avatar:store("GSCarrier:vehicle.Seats", veh_remotes) end
   end
 end, "GSCarrier:Tick_VehiclePassengerCheck")
 

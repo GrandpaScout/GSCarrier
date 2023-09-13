@@ -147,6 +147,8 @@ Carrier.rider.controller.setNameplatePivot(vec(1,2,3))
 -- Gets and sets whether Carrier is allowed to move the camera or not.
 -- By default, Carrier will move the camera to match your eye position at the seat you are in.
 -- This can be disabled if you want custom functionality.
+--
+-- This is disabled by default.
 local state = Carrier.rider.controller.getModifyCamera()
 Carrier.rider.controller.setModifyCamera(true)
 
@@ -161,8 +163,10 @@ Carrier.rider.controller.setCameraOffset(vec(1,2,3))
 -- Gets and sets whether Carrier is allowed to move the "eye position" or not.
 -- By default, Carrier will move the eye position to match where it would be if you were
 -- physically sitting on the seat.
--- THIS MAY BE CONSIDERED A CHEAT IN SOME SERVERS. IT IS RECOMMENDED TO DISABLE THIS IF YOU
--- ARE NOT CERTAIN THIS WOULD BE ALLOWED.
+-- THIS MAY BE CONSIDERED A CHEAT IN SOME SERVERS. IT IS RECOMMENDED TO LEAVE THIS DISABLED
+-- IF YOU ARE NOT CERTAIN THIS WOULD BE ALLOWED.
+--
+-- This is disabled by default.
 local state = Carrier.rider.controller.getModifyEye()
 Carrier.rider.controller.setModifyEye(true)
 
@@ -171,8 +175,6 @@ Carrier.rider.controller.setModifyEye(true)
 -- This should generally match whatever is put into `renderer:setEyeOffset()`.
 -- (This function does not support 3-number inputs. Use vectors!)
 -- A nil offset is effectively the same as zero offset.
--- THIS MAY BE CONSIDERED A CHEAT IN SOME SERVERS. IT IS RECOMMENDED TO DISABLE THIS IF YOU
--- ARE NOT CERTAIN THIS WOULD BE ALLOWED.
 local offset = Carrier.rider.controller.getEyeOffset()
 Carrier.rider.controller.setEyeOffset(vec(1,2,3))
 
@@ -180,5 +182,7 @@ Carrier.rider.controller.setEyeOffset(vec(1,2,3))
 -- When using certain items, the position they use for targeting is your default position
 -- and not the modified position given by Carrier. This is fixed by moving your camera
 -- back to its original position while aiming an item.
+--
+-- This is disabled by default.
 local state = Carrier.rider.controller.getAimEnabled()
 Carrier.rider.controller.setAimEnabled(true)

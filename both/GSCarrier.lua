@@ -27,7 +27,7 @@
 --]] =======================================================================
 
 local ID = "GSCarrier"
-local VER = "0.9.3"
+local VER = "0.9.4"
 local FIG = {"0.1.2", "0.1.2"}
 
 
@@ -520,11 +520,11 @@ this.rider = rider
 ---@type Vector3?
 local rcon_gbloffset
 local rcon_enpoffset = ENT_NP:getPivot()
-local rcon_camactive = true
+local rcon_camactive = false
 local rcon_camoffset = renderer:getCameraOffsetPivot()
-local rcon_eyeactive = true
+local rcon_eyeactive = false
 local rcon_eyeoffset = renderer:getEyeOffset()
-local rcon_aimactive = true
+local rcon_aimactive = false
 
 ---The controller contains functions that control certain parts of a Figura avatar that would normally be overwritten by
 ---Carrier.

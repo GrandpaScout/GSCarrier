@@ -6,7 +6,7 @@
 -- │ └─┐ └─────┘└─────┘ ┌─┘ │ --
 -- └───┘                └───┘ --
 ---@module  "Passenger Pivot Library (Vehicle Only)" <GSCarrier_VehicleOnly>
----@version v0.9.3
+---@version v0.9.5
 ---@see     GrandpaScout @ https://github.com/GrandpaScout
 -- 
 
@@ -27,7 +27,7 @@
 --]] =======================================================================
 
 local ID = "GSCarrier_VehicleOnly"
-local VER = "0.9.4"
+local VER = "0.9.5"
 local FIG = {"0.1.2", "0.1.2"}
 
 
@@ -247,7 +247,7 @@ local function remote_runCondition(self, ent, tags)
   if not seat.part or not seat.part:getVisible() then return false end
   if type(seat.condition) == "function" then
     local s, v = pcall(seat.condition, ent, tags, seat)
-    return s and v or nil
+    if s then return v end
   end
 end
 ---@param self Lib.GS.Carrier.SeatRemote

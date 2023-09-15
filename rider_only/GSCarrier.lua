@@ -6,7 +6,7 @@
 -- │ └─┐ └─────┘└─────┘ ┌─┘ │ --
 -- └───┘                └───┘ --
 ---@module  "Passenger Pivot Library (Rider Only)" <GSCarrier_RiderOnly>
----@version v0.9.2
+---@version v0.9.5
 ---@see     GrandpaScout @ https://github.com/GrandpaScout
 -- 
 
@@ -27,7 +27,7 @@
 --]] =======================================================================
 
 local ID = "GSCarrier_RiderOnly"
-local VER = "0.9.4"
+local VER = "0.9.5"
 local FIG = {"0.1.2", "0.1.2"}
 
 
@@ -357,14 +357,15 @@ events.TICK:register(function()
       seat_pri = (not seat_occ or seat_occ == player) and seat:runCondition(player, tags)
       if seat_pri == nil then seat_pri = seat:getPriority() end
 
-      if seat_pri
-        and (
-          seat_pri == true and seat_uid < uid
-          or seat_pri ~= true and (seat_pri > priority or (seat_pri == priority and seat_uid < uid))
-        )
-      then
+      if seat_pri == true then
+        if seat_uid < uid then
+          uid = seat_uid
+          priority = NAN
+          selected_seat = seat
+        end
+      elseif seat_pri and seat_pri > priority or (seat_pri == priority and seat_uid < uid) then
         uid = seat_uid
-        priority = NAN
+        priority = seat_pri
         selected_seat = seat
       end
     end

@@ -134,6 +134,10 @@ Get the current vehicle and seat (if any) with the following functions:
 local vehicle = Carrier.rider.getVehicle()
 
 -- May return `nil` if there is no seat.
+-- Returns the ID of the seat. This is cheaper than `.getSeat()` as getting the tag list is expensive.
+local seat_id = Carrier.rider.getSeatID()
+
+-- May return `nil` if there is no seat.
 -- Doesn't actually return a seat object, it instead returns a table of
 -- data for the seat at the time this function was called.
 local seat_data = Carrier.rider.getSeat()

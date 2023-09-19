@@ -4,18 +4,20 @@ A Figura Library that allows avatars to reposition the players sitting on them. 
 a time and passengers in vehicles you are controlling.
 
 > [!WARNING]  
-> Tags are a work-in-progress feature and may change as this library is updated to version `1.0.0`.  
+> Tags are a work-in-progress feature and may change as this library is updated.  
 > It is not recommended to use them unless you understand that they will change!
+>
+> **AN UPDATE FOLLOWING `1.0.0` MAY REMOVE TAGS COMPLETELY IN PLACE OF A NEW SYSTEM!**
 
 
 ## Intallation
 
-To install this library, download this repository and pick a folder.
-* `both`: Contains code for creating a Carrier vehicle and a Carrier rider.  
+To install this library, download this repository and pick a folder in the `script` folder.
+* `script/both`: Contains code for creating a Carrier vehicle and a Carrier rider.  
   Use this if you plan to use both features.
-* `rider_only`: Contains code only for creating a Carrier rider.  
+* `script/rider_only`: Contains code only for creating a Carrier rider.  
   Use this if you only plan to ride Carrier vehicles.
-* `vehicle_only`: Contains code only for creating a Carrier vehicle.  
+* `script/vehicle_only`: Contains code only for creating a Carrier vehicle.  
   Use this if you only plan to put seats on your avatar and not ride Carrier vehicles.
 
 
@@ -31,18 +33,28 @@ local Carrier = require("GSCarrier")
 
 Create a new seat with
 ```lua
--- The entire table and everything in it is optional, you can leave out the entire table 
+-- The entire table and everything in it is optional, you can leave out the entire table
 -- or parts of it if you don't want to mess with them.
 Carrier.vehicle.newSeat("Name", models.model_name.path.to.part, {
+  -- The higher the priority, the more preferred this seat is.
   priority = integer,
+
+  -- If only a tag name is given, it is treated as `[tag_name] = true`.
+  -- {"ns:foo", "ns:bar", ["ns:baz"] = 123} == {["ns:foo"] = true, ["ns:bar"] true, ["ns:baz"] = 123}
   tags = {
-    ["namespace:tag_name"] = true,
+    "namespace:tag_name", "namespace:another_tag", "namespace:one_more_tag",
     ["namespace:tag_with_value"] = 123,
+    ["namespace:another_tag_with_value"] = "qwerty",
   },
+
+  -- Do something when this seat is entered or exited.
   callback = function(state, self)
     -- state is `false` if exiting or `true` if entering the seat.
     -- self is the seat object
   end,
+
+  -- Check some conditions before placing someone in this seat. This is checked once per tick per
+  -- passenger using Carrier. Keep it simple and efficient!
   condition = function(ent, tags, self)
     -- ent is the entity checking this seat.
     -- tags is the list of tags the entity has.
@@ -50,7 +62,7 @@ Carrier.vehicle.newSeat("Name", models.model_name.path.to.part, {
 
     -- return true to mark this seat as top priority
     -- return false to deny the entity from sitting in this seat.
-    -- return a number to change the priority of this sear for this entity.
+    -- return a number to change the priority of this seat for this entity.
     -- return nothing to leave the priority alone.
 
     -- No matter what, there is a hidden condition that always returns `false` if the part this seat

@@ -1,4 +1,5 @@
 ---@meta _
+---@version 1.0.0
 
 error(
   "This file should not exist in your Figura avatar!\n" +
@@ -22,135 +23,1662 @@ error(
 ---@alias Lib.GS.Carrier.vehicleTag string
 ---**[CLASS]** *(Internal)*
 ---***
----This vehicle is a non-player entity.
+---This is a non-player entity.
 ---
----This tag is always applied to non-player vehicles.
+---This tag is always applied to non-player entities.
 ---
+---&nbsp;  
 ---*Conflicts with:*
----> `gscarrier:player`
----| "gscarrier:cem"
+---> `class:player`
+---| "class:cem"
 ---**[CLASS]** *(Internal)*
 ---***
----This vehicle is a player.
+---This is a player entity.
 ---
----This tag is always applied to player vehicles.
+---This tag is always applied to player entities.
 ---
+---&nbsp;  
 ---*Conflicts with:*
----> `gscarrier:cem`
----| "gscarrier:player"
----
----
----
----**[BODY]**
+---> `class:cem`
+---| "class:player"
+---**[SHAPE]**
 ---***
----This vehicle defaults to a vertical posture.  
----This is mostly orthogrades.
----
----*Conflicts with:*
----> `gscarrier:horizontal` `gscarrier:taur`
----| "gscarrier:vertical"
----**[BODY]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:vertical_posture"
+---**[SHAPE]**
 ---***
----This vehicle defaults to a horizontal posture.  
----This also includes pronogrades.
----
----*Conflicts with:*
----> `gscarrier:vertical`
----| "gscarrier:horizontal"
----**[BODY]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:horizontal_posture"
+---**[SHAPE]**
 ---***
----This vehicle has a humanoid shape.
----
----*Conflicts with:*
----> `gscarrier:quadruped` `gscarrier:insectoid` `gscarrier:arachnoid` `gscarrier:taur` `gscarrier:simple`
----> `gscarrier:amorphous`
----| "gscarrier:humanoid"
----**[BODY]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:bipedal"
+---**[SHAPE]**
 ---***
----This vehicle has a bipedal shape.
----
----*Conflicts with:*
----> `gscarrier:quadruped` `gscarrier:insectoid` `gscarrier:arachnoid` `gscarrier:taur` `gscarrier:simple`
----> `gscarrier:amorphous`
----| "gscarrier:biped"
----**[BODY]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:quadrupedal"
+---**[SHAPE]**
 ---***
----This vehicle has a quadrupedal shape.  
----Includes things that don't have four legs exactly but still use a similar frame.
----
----*Conflicts with:*
----> `gscarrier:humanoid` `gscarrier:biped` `gscarrier:insectoid` `gscarrier:arachnoid` `gscarrier:taur`
----> `gscarrier:simple` `gscarrier:amorphous`
----| "gscarrier:quadruped"
----**[BODY]**
----***
----This vehicle has an insect-like shape.
----
----*Conflicts with:*
----> `gscarrier:humanoid` `gscarrier:biped` `gscarrier:quadruped` `gscarrier:arachnoid` `gscarrier:taur`
----> `gscarrier:simple` `gscarrier:amorphous`
----| "gscarrier:insectoid"
----**[BODY]**
----***
----This vehicle has a spider-like shape.
----
----*Conflicts with:*
----> `gscarrier:humanoid` `gscarrier:biped` `gscarrier:quadruped` `gscarrier:insectoid` `gscarrier:taur`
----> `gscarrier:simple` `gscarrier:amorphous`
----| "gscarrier:arachnoid"
----**[BODY]**
----***
----This vehicle has a taur-like shape.
----
----*Conflicts with:*
----> `gscarrier:vertical` `gscarrier:humanoid` `gscarrier:biped` `gscarrier:quadruped` `gscarrier:insectoid`
----> `gscarrier:simple` `gscarrier:arachnoid` `gscarrier:amorphous`
----| "gscarrier:taur"
----**[BODY]**
----***
----This vehicle has a simple shape.  
----This is common with vehicles that are objects/robots and not living things.
----
----*Conflicts with:*
----> `gscarrier:humanoid` `gscarrier:biped` `gscarrier:quadruped` `gscarrier:insectoid` `gscarrier:arachnoid`
----> `gscarrier:taur` `gscarrier:amorphous`
----| "gscarrier:simple"
----**[BODY]**
----***
----This vehicle has no definable shape.
----
----*Conflicts with:*
----> `gscarrier:humanoid` `gscarrier:quadruped` `gscarrier:insectoid` `gscarrier:arachnoid` `gscarrier:taur`
----> `gscarrier:simple`
----| "gscarrier:amorphous"
----
----
----
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:amorphous"
 ---**[SPECIES]**
 ---***
----This is a placeholder for a tag group that may exist later.
----
----Do not use this tag.
----| "gscarrier:placeholder1"
----
----
----
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:humanoid"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:anthro"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:feral"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:taur"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:amphibian"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:frog"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:salamander"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:arthropod"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:arachnid"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:scorpion"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:spider"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:crustacean"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:crab"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:lobster"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:shrimp"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:insect"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:beetle"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ant"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:bee"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:wasp"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:butterfly"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:moth"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:avian"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:bird"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hawk"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:eagle"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:vulture"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:goose"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:swan"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:duck"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:dove"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pigeon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:corvid"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:crow"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:raven"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:jay"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:corvid_magpie"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:falcon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:finch"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:flamingo"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:chicken"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:peafowl"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:turkey"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:crane"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:swallow"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hummingbird"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:seagull"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:owl"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:parrot"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cockatoo"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:parakeet"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:heron"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pelican"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:penguin"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:woodpecker"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ostrich"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:robin"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:stork"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:toucan"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:phoenix"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gryphon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:harpy"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:avali"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:chocobo"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:mammal"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:antelope"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gazelle"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:bovine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:buffalo"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:bison"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cow"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:canine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:coyote"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:dog"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:fox"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:jackal"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:anubian_jackal"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:tanuki"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:wolf"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cerberus"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:camelid"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:alpaca"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:camel"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:llama"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:caprine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:goat"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:sheep"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cervine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:deer"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:elk"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:moose"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:reindeer"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:equine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:donkey"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:horse"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:zebra"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pegasus"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:unicorn"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:winged_unicorn"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:feline"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cougar"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:lynx"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ocelot"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cheetah"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cat"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pantherine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:jaguar"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:leopard"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:lion"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:tiger"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:lagomorph"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hare"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:rabbit"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:jackalope"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cetacean"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:dolphin"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:whale"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pinniped"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:sea_lion"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:seal"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:walrus"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:marsupial"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:kangaroo"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:koala"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:opossum"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:echidna"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:platypus"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:mustelid"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:badger"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ferret"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:otter"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:weasel"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:primate"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ape"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gorilla"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:monkey"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:rodent"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:beaver"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:chipmunk"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hamster"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:mouse"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:porcupine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:rat"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:squirrel"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:porcine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pig"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:boar"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:warthog"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ursid"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:panda"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:bear"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:armadillo"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:bat"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:elephant"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:giraffe"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hedgehog"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hippopotamus"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:human"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hyena"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:raccoon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:red_panda"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:rhinoceros"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:skunk"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gastropod"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:slug"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:snail"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cephalopod"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:octopus"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:octoling"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:squid"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:inkling"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:fish"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pufferfish"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:shark"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:reptile"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:alligator"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:crocodile"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:dinosaur"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:lizard"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:chameleon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gecko"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:iguana"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:snake"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:boa"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cobra"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:python"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:viper"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:turtle"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:tortoise"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:angel"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:creeper"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:dragon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:eastern_dragon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ender_dragon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:western_dragon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:wyvern"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:monster_hunter_monster"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:bird_wyvern"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:brute_wyvern"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:elder_dragon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:fanged_wyvern"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:flying_wyvern"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:piscine_wyvern"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:fanged_beast"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:snake_wyvern"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:lynian"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:felyne"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:palico"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gajalaka"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:grimalkyne"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:palamute"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:dwarf"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:elf"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:enderman"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:fairy"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:flora_fauna"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:dryad"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gnome"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:goblin"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gorgon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:halfling"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hydra"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:lamia"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:magma_cube"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:manticore"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:yoshi"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:naga"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:orc"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pixie"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pokemon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_i"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_ii"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_iii"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_iv"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_v"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_vi"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_vii"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_viii"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_ix"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:rexouium"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:satyr"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:sculk"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:warden"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:slime"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:sphinx"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:spirit"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ghost"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:tiefling"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:undead"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:skeleton"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:stray"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:wither_skeleton"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:mummy"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:wither"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:zombie"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:drowned"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:husk"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:zombified_piglin"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:xenomorph"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:yeti"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:machine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:robot"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:object"
+---**[OBJECT]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "object:pokeball"
 ---**[TERRAIN]**
 ---***
----This vehicle can travel on land.
----| "gscarrier:land"
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "terrain:land"
 ---**[TERRAIN]**
 ---***
----This vehicle can travel on water.
----| "gscarrier:water"
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "terrain:water"
 ---**[TERRAIN]**
 ---***
----This vehicle can travel in water.
----| "gscarrier:underwater"
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "terrain:underwater"
 ---**[TERRAIN]**
 ---***
----This vehicle can travel through air.
----| "gscarrier:air"
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "terrain:air"
 
 
 ---===|| SEAT TAGS ||================================================================================================---
@@ -163,66 +1691,54 @@ error(
 ---
 ---Usage of conflicting tags results in behavior defined by the riders, but should be avoided.
 ---@alias Lib.GS.Carrier.seatTag string
----**[HEIGHT]**
+---**[POSITION]**
 ---***
----This seat is high up.
----
----*Conflicts with:*
----> `gscarrier:low`
----| "gscarrier:high"
----**[HEIGHT]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "position:high"
+---**[POSITION]**
 ---***
----This seat is low to the ground.
----
----*Conflicts with:*
----> `gscarrier:high`
----| "gscarrier:low"
----
----
----
----**[TYPE]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "position:low"
+---**[SHAPE]**
 ---***
----The seat is on (or is) a flat surface.
----
----*Conflicts with:*
----> `gscarrier:chair` `gscarrier:mounted` `gscarrier:piggyback` `gscarrier:hanging` `gscarrier:floating`
----| "gscarrier:flat"
----**[TYPE]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:flat"
+---**[SHAPE]**
 ---***
----The legs have room to hang down like a chair.
----
----*Conflicts with:*
----> `gscarrier:flat` `gscarrier:mounted` `gscarrier:piggyback` `gscarrier:hanging` `gscarrier:floating`
----| "gscarrier:chair"
----**[TYPE]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:chair"
+---**[SHAPE]**
 ---***
----The rider is mounted on something like a horse.
----
----*Conflicts with:*
----> `gscarrier:flat` `gscarrier:chair` `gscarrier:piggyback` `gscarrier:hanging` `gscarrier:floating`
----| "gscarrier:mounted"
----**[TYPE]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:mounted"
+---**[SHAPE]**
 ---***
----The rider is carried on the back of something in this seat.  
----Meant to be used for more upright models.
----
----*Conflicts with:*
----> `gscarrier:flat` `gscarrier:chair` `gscarrier:mounted` `gscarrier:hanging` `gscarrier:floating`
----| "gscarrier:piggyback"
----**[TYPE]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:piggyback"
+---**[SHAPE]**
 ---***
----The rider is hanging from something in this seat.
----
----*Conflicts with:*
----> `gscarrier:flat` `gscarrier:chair` `gscarrier:mounted` `gscarrier:piggyback` `gscarrier:floating`
----| "gscarrier:hanging"
----**[TYPE]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:hanging"
+---**[SHAPE]**
 ---***
----The rider is somehow floating in this seat.
----
----*Conflicts with:*
----> `gscarrier:flat` `gscarrier:chair` `gscarrier:mounted` `gscarrier:piggyback` `gscarrier:hanging`
----| "gscarrier:floating"
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:floating"
 
 
 ---===|| RIDER TAGS ||===============================================================================================---
@@ -237,123 +1753,1635 @@ error(
 ---@alias Lib.GS.Carrier.riderTag string
 ---**[CLASS]** *(Internal)*
 ---***
----This rider is a non-player entity.
+---This is a non-player entity.
 ---
----This tag is always applied to non-player riders.
----| "gscarrier:cem"
----**[INTERNAL]**
----***
----This rider is a player.
+---This tag is always applied to non-player entities.
 ---
----This tag is always applied to player riders.
----| "gscarrier:player"
----
----
----
----**[BODY]**
----***
----This rider has a vertical posture.  
----This is mostly orthogrades.
----
+---&nbsp;  
 ---*Conflicts with:*
----> `gscarrier:horizontal` `gscarrier:taur`
----| "gscarrier:vertical"
----**[BODY]**
+---> `class:player`
+---| "class:cem"
+---**[CLASS]** *(Internal)*
 ---***
----This rider has a horizontal posture.  
----This does *not* include pronogrades.
+---This is a player entity.
 ---
+---This tag is always applied to player entities.
+---
+---&nbsp;  
 ---*Conflicts with:*
----> `gscarrier:vertical` `gscarrier:taur`
----| "gscarrier:horizontal"
----**[BODY]**
+---> `class:cem`
+---| "class:player"
+---**[SHAPE]**
 ---***
----This rider has a humanoid shape.
----
----*Conflicts with:*
----> `gscarrier:quadruped` `gscarrier:insectoid` `gscarrier:arachnoid` `gscarrier:taur` `gscarrier:simple`
----> `gscarrier:amorphous`
----| "gscarrier:humanoid"
----**[BODY]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:vertical_posture"
+---**[SHAPE]**
 ---***
----This rider has a bipedal shape.
----
----*Conflicts with:*
----> `gscarrier:quadruped` `gscarrier:insectoid` `gscarrier:arachnoid` `gscarrier:taur` `gscarrier:simple`
----> `gscarrier:amorphous`
----| "gscarrier:biped"
----**[BODY]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:horizontal_posture"
+---**[SHAPE]**
 ---***
----This rider has a quadrupedal shape.  
----Includes things that don't have four legs exactly but still use a similar frame.
----
----*Conflicts with:*
----> `gscarrier:humanoid` `gscarrier:biped` `gscarrier:insectoid` `gscarrier:arachnoid` `gscarrier:taur`
----> `gscarrier:simple` `gscarrier:amorphous`
----| "gscarrier:quadruped"
----**[BODY]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:bipedal"
+---**[SHAPE]**
 ---***
----This rider has an insect-like shape.
----
----*Conflicts with:*
----> `gscarrier:humanoid` `gscarrier:biped` `gscarrier:quadruped` `gscarrier:arachnoid` `gscarrier:taur`
----> `gscarrier:simple` `gscarrier:amorphous`
----| "gscarrier:insectoid"
----**[BODY]**
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:quadrupedal"
+---**[SHAPE]**
 ---***
----This rider has a spider-like shape.
----
----*Conflicts with:*
----> `gscarrier:humanoid` `gscarrier:biped` `gscarrier:quadruped` `gscarrier:insectoid` `gscarrier:taur`
----> `gscarrier:simple` `gscarrier:amorphous`
----| "gscarrier:arachnoid"
----**[BODY]**
----***
----This rider has a taur-like shape.
----
----*Conflicts with:*
----> `gscarrier:vertical` `gscarrier:humanoid` `gscarrier:biped` `gscarrier:quadruped` `gscarrier:insectoid`
----> `gscarrier:simple` `gscarrier:arachnoid` `gscarrier:amorphous`
----| "gscarrier:taur"
----**[BODY]**
----***
----This rider has a simple shape.  
----This is common with riders that are objects/robots and not living things.
----
----*Conflicts with:*
----> `gscarrier:humanoid` `gscarrier:biped` `gscarrier:quadruped` `gscarrier:insectoid` `gscarrier:arachnoid`
----> `gscarrier:taur` `gscarrier:amorphous`
----| "gscarrier:simple"
----**[BODY]**
----***
----This rider has no definable shape.
----
----*Conflicts with:*
----> `gscarrier:humanoid` `gscarrier:quadruped` `gscarrier:insectoid` `gscarrier:arachnoid` `gscarrier:taur`
----> `gscarrier:simple`
----| "gscarrier:amorphous"
----
----
----
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "shape:amorphous"
 ---**[SPECIES]**
 ---***
----This is a placeholder for a tag group that may exist later.
----
----Do not use this tag.
----| "gscarrier:placeholder1"
----
----
----
----**[SIZE]** *(Internal)*
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:humanoid"
+---**[SPECIES]**
 ---***
----The scale of this rider relative to Steve.
----
----*If you are using Pehkui, this should be relative to the size that a Steve the same scale as you would be.*
----| "gscarrier:scale"
----
----
----
----**[PEHKUI]** *(Internal)*
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:anthro"
+---**[SPECIES]**
 ---***
----Contains the pehkui scale of this rider.
----| "pehkui:scale"
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:feral"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:taur"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:amphibian"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:frog"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:salamander"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:arthropod"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:arachnid"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:scorpion"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:spider"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:crustacean"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:crab"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:lobster"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:shrimp"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:insect"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:beetle"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ant"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:bee"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:wasp"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:butterfly"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:moth"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:avian"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:bird"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hawk"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:eagle"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:vulture"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:goose"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:swan"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:duck"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:dove"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pigeon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:corvid"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:crow"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:raven"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:jay"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:corvid_magpie"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:falcon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:finch"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:flamingo"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:chicken"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:peafowl"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:turkey"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:crane"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:swallow"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hummingbird"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:seagull"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:owl"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:parrot"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cockatoo"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:parakeet"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:heron"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pelican"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:penguin"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:woodpecker"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ostrich"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:robin"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:stork"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:toucan"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:phoenix"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gryphon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:harpy"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:avali"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:chocobo"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:mammal"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:antelope"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gazelle"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:bovine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:buffalo"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:bison"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cow"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:canine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:coyote"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:dog"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:fox"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:jackal"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:anubian_jackal"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:tanuki"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:wolf"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cerberus"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:camelid"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:alpaca"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:camel"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:llama"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:caprine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:goat"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:sheep"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cervine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:deer"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:elk"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:moose"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:reindeer"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:equine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:donkey"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:horse"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:zebra"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pegasus"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:unicorn"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:winged_unicorn"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:feline"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cougar"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:lynx"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ocelot"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cheetah"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cat"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pantherine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:jaguar"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:leopard"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:lion"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:tiger"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:lagomorph"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hare"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:rabbit"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:jackalope"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cetacean"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:dolphin"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:whale"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pinniped"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:sea_lion"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:seal"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:walrus"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:marsupial"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:kangaroo"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:koala"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:opossum"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:echidna"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:platypus"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:mustelid"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:badger"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ferret"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:otter"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:weasel"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:primate"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ape"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gorilla"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:monkey"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:rodent"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:beaver"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:chipmunk"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hamster"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:mouse"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:porcupine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:rat"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:squirrel"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:porcine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pig"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:boar"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:warthog"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ursid"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:panda"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:bear"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:armadillo"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:bat"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:elephant"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:giraffe"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hedgehog"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hippopotamus"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:human"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hyena"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:raccoon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:red_panda"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:rhinoceros"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:skunk"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gastropod"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:slug"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:snail"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cephalopod"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:octopus"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:octoling"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:squid"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:inkling"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:fish"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pufferfish"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:shark"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:reptile"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:alligator"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:crocodile"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:dinosaur"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:lizard"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:chameleon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gecko"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:iguana"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:snake"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:boa"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:cobra"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:python"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:viper"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:turtle"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:tortoise"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:angel"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:creeper"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:dragon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:eastern_dragon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ender_dragon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:western_dragon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:wyvern"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:monster_hunter_monster"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:bird_wyvern"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:brute_wyvern"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:elder_dragon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:fanged_wyvern"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:flying_wyvern"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:piscine_wyvern"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:fanged_beast"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:snake_wyvern"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:lynian"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:felyne"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:palico"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gajalaka"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:grimalkyne"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:palamute"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:dwarf"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:elf"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:enderman"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:fairy"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:flora_fauna"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:dryad"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gnome"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:goblin"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gorgon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:halfling"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:hydra"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:lamia"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:magma_cube"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:manticore"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:yoshi"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:naga"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:orc"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pixie"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:pokemon"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_i"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_ii"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_iii"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_iv"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_v"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_vi"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_vii"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_viii"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:gen_ix"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:rexouium"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:satyr"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:sculk"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:warden"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:slime"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:sphinx"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:spirit"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:ghost"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:tiefling"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:undead"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:skeleton"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:stray"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:wither_skeleton"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:mummy"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:wither"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:zombie"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:drowned"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:husk"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:zombified_piglin"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:xenomorph"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:yeti"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:machine"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:robot"
+---**[SPECIES]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "species:object"
+---**[OBJECT]**
+---***
+---```yaml
+---  !!TAG_DATA_MISSING!!
+---```
+---| "object:pokeball"

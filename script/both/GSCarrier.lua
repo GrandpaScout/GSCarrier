@@ -6,7 +6,7 @@
 -- │ └─┐ └─────┘└─────┘ ┌─┘ │ --
 -- └───┘                └───┘ --
 ---@module  "Passenger Pivot Library" <GSCarrier>
----@version v0.9.5
+---@version v0.9.6
 ---@see     GrandpaScout @ https://github.com/GrandpaScout
 -- 
 
@@ -27,12 +27,13 @@
 --]] =======================================================================
 
 local ID = "GSCarrier"
-local VER = "0.9.5"
+local VER = "0.9.6"
 local FIG = {"0.1.2", "0.1.2"}
 
 
 ---===|| LOCALS ||===================================================================================================---
 
+--!! RIDER_ONLY
 local max = math.max
 
 local ENT_NP = nameplate.ENTITY
@@ -44,12 +45,13 @@ local NAN = 0 / 0
 
 local VEC_UP = vec(0, 1, 0)
 local NP_OFF = vec(0, 0.5, 0)
+--!! END
 
 local internal_tags = {
-  ["gscarrier:cem"] = true,
-  ["gscarrier:player"] = true,
-  ["gscarrier:scale"] = true,
-  ["pehkui:scale"] = true,
+  ["class:cem"] = true,
+  ["class:player"] = true,
+  ["scale:avatar"] = true,
+  ["scale:pehkui"] = true,
   ["gscarrier:placeholder1"] = true
 }
 
@@ -71,12 +73,13 @@ local thismt = {
 
 ---===|| VEHICLE SETUP ||============================================================================================---
 
+--!! VEHICLE_ONLY
 ---@type {[integer]: Lib.GS.Carrier.Seat, [string]: integer}
 local veh_seats = {}
 ---@type Lib.GS.Carrier.SeatRemote[]
 local veh_remotes = {}
 ---@type {[Lib.GS.Carrier.vehicleTag]: unknown}
-local veh_tags = {["gscarrier:player"] = true}
+local veh_tags = {}
 
 ---@alias Lib.GS.Carrier.seatCallback fun(state: boolean, self: Lib.GS.Carrier.Seat)
 ---@alias Lib.GS.Carrier.seatCondition fun(ent: Entity.any, tags: {[Lib.GS.Carrier.riderTag]: unknown}, self: Lib.GS.Carrier.Seat): ((boolean | integer)?)
@@ -214,7 +217,7 @@ function Seat:setCallback(callback) self.callback = callback end
 ---Gets the function that will check whether a rider using the Carrier system is allowed to use this seat.
 ---@param condition? Lib.GS.Carrier.seatCondition
 function Seat:getCondition(condition) self.condition = condition end
-
+--!! END
 
 ---@class Lib.GS.Carrier.SeatRemote
 ---@field uid integer
@@ -228,6 +231,7 @@ function Seat:getCondition(condition) self.condition = condition end
 ---@field runCondition fun(self: Lib.GS.Carrier.SeatRemote, ent: Entity.any, tags: {[Lib.GS.Carrier.riderTag]: any}): ((boolean | integer)?)
 ---@field setOccupant fun(self: Lib.GS.Carrier.SeatRemote, ent?: Entity.any)
 
+--!! VEHICLE_ONLY
 local function iterate_tags(uid, name) return next(veh_seats[uid].tags, name) end
 
 ---@param self Lib.GS.Carrier.SeatRemote
@@ -280,7 +284,7 @@ local vehicle = {}
 ---The tags that define the shape and function of this seat.
 ---
 ---These are used by Carrier riders to determine how to act while in this seat.
----@field tags? {[Lib.GS.Carrier.seatTag]: any}
+---@field tags? {[integer]: Lib.GS.Carrier.seatTag, [Lib.GS.Carrier.seatTag]: any}
 ---The function to run when a rider using the Carrier system starts or stops sitting in this seat.
 ---@field callback? Lib.GS.Carrier.seatCallback
 ---@field condition? Lib.GS.Carrier.seatCondition
@@ -297,10 +301,17 @@ function vehicle.newSeat(name, part, options)
   if not part then error("given part does not exist", 2) end
   options = options or {}
 
+  local tags = options.tags
+
   ---@type {[Lib.GS.Carrier.seatTag]: unknown}
   local tag_clone = {}
-  if options.tags then
-    for t, v in pairs(options.tags) do
+  if tags then
+    for i, tag in ipairs(tags) do
+      tag_clone[tag] = true
+      tags[i] = nil
+    end
+    ---@cast tags {[Lib.GS.Carrier.seatTag]: any}
+    for t, v in pairs(tags) do
       if not internal_tags[t] then tag_clone[t] = v end
     end
   end
@@ -406,8 +417,10 @@ avatar:store("GSCarrier:vehicle.Seats", veh_remotes)
 avatar:store("GSCarrier:vehicle.Tags", veh_tags)
 
 this.vehicle = vehicle
+--!! END
 
 
+--!! RIDER_ONLY
 ---===|| RIDER SETUP ||==============================================================================================---
 
 ---@type {[ModelPart]: true}
@@ -419,7 +432,7 @@ local rider_vehicle
 local rider_seat
 
 ---@type {[Lib.GS.Carrier.riderTag]: unknown}
-local rider_tags = {["gscarrier:scale"] = 1, ["pehkui:scale"] = 1}
+local rider_tags = {["scale:avatar"] = 1, ["scale:pehkui"] = 1}
 
 ---@class Lib.GS.Carrier.seatData
 ---@field uid integer
@@ -503,7 +516,7 @@ end
 ---If `scale` is `nil`, it will default to `1`.
 ---@param value? number
 function rider.setScale(value)
-  rider_tags["gscarrier:scale"] = value or 1
+  rider_tags["scale:avatar"] = value or 1
   avatar:store("GSCarrier:rider.Tags", rider_tags)
 end
 
@@ -618,22 +631,28 @@ function ridercon.setAimEnabled(state) rcon_aimactive = not not state end
 
 
 rider.controller = ridercon
+--!! END
 
 
 ---===|| EVENTS ||===================================================================================================---
 
 events.ENTITY_INIT:register(function()
-  local tag_name = user:isPlayer() and "gscarrier:player" or "gscarrier:cem"
+  local tag_name = user:isPlayer() and "class:player" or "class:cem"
+  --!! VEHICLE_ONLY
   veh_tags[tag_name] = true
-  rider_tags[tag_name] = true
   avatar:store("GSCarrier:vehicle.Tags", veh_tags)
+  --!! END
+  --!! RIDER_ONLY
+  rider_tags[tag_name] = true
   avatar:store("GSCarrier:rider.Tags", rider_tags)
+  --!! END
 end)
 
+local mark_for_cleanup = {}
+
+--!! RIDER_ONLY
 ---@type Entity.any?
 local actual_vehicle
-
-local mark_for_cleanup = {}
 
 local function inOutCubic(x) return x < 0.5 and (4 * x ^ 3) or (1 - ((-2 * x + 2) ^ 3) * 0.5) end
 
@@ -651,7 +670,9 @@ local aiming_items = {
 }
 
 local _headyaw, headyaw, _vehyaw, vehyaw = 0, 0, 0, 0
+--!! END
 events.TICK:register(function()
+  --!! RIDER_ONLY
   rider_vehicle = nil
   actual_vehicle = player:getVehicle()
 
@@ -749,7 +770,7 @@ events.TICK:register(function()
   end
 
   local scales = player:getNbt()["pehkui:scale_data_types"]
-  local last_scale = rider_tags["pehkui:scale"]
+  local last_scale = rider_tags["scale:pehkui"]
   if scales then
     local scale = (
       scales["pehkui:base"] and scales["pehkui:base"].scale or 1
@@ -761,14 +782,16 @@ events.TICK:register(function()
     )
 
     if scale ~= last_scale then
-      rider_tags["pehkui:scale"] = scale
+      rider_tags["scale:pehkui"] = scale
       avatar:store("GSCarrier:rider.Tags", rider_tags)
     end
   elseif last_scale ~= 1 then
-    rider_tags["pehkui:scale"] = 1
+    rider_tags["scale:pehkui"] = 1
     avatar:store("GSCarrier:rider.Tags", rider_tags)
   end
+  --!! END
 
+  --!! VEHICLE_ONLY
   if next(veh_seats) then
     local passengers = player:getPassengers()
     local passenger_set = {}
@@ -796,8 +819,10 @@ events.TICK:register(function()
     end
     if update_seats then avatar:store("GSCarrier:vehicle.Seats", veh_remotes) end
   end
-end, "GSCarrier:Tick_RiderVehicleCheck_RiderAimCheck_RiderPehkuiCheck_VehiclePassengerCheck")
+  --!! END
+end, "GSCarrier:Tick_CarrierChecks")
 
+--!! RIDER_ONLY
 local world_offset = vec(0, 0, 0)
 local local_offset = vec(0, 0, 0)
 
@@ -873,6 +898,7 @@ events.RENDER:register(function(delta, ctx)
     was_riding = false
   end
 end, "GSCarrier:Render_TheMagic")
+--!! END
 
 
 do return setmetatable(this, thismt) end

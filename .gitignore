@@ -8,4 +8,8 @@
 *.code-workspace
 install.bat
 
+# Old code
 GSRyder.lua
+# Experimental features
+build
+out

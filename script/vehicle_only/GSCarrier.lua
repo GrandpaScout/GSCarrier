@@ -6,7 +6,7 @@
 -- │ └─┐ └─────┘└─────┘ ┌─┘ │ --
 -- └───┘                └───┘ --
 ---@module  "Passenger Pivot Library" <GSCarrier>
----@version v0.9.6
+---@version v0.9.7
 ---@see     GrandpaScout @ https://github.com/GrandpaScout
 -- 
 
@@ -27,7 +27,7 @@
 --]] =======================================================================
 
 local ID = "GSCarrier"
-local VER = "0.9.6"
+local VER = "0.9.7"
 local FIG = {"0.1.2", "0.1.2"}
 
 
@@ -415,7 +415,7 @@ events.ENTITY_INIT:register(function()
   veh_tags[tag_name] = true
   avatar:store("GSCarrier:vehicle.Tags", veh_tags)
   --!! END
-end)
+end, "GSCarrier:EntityInit_ClassTag")
 
 local mark_for_cleanup = {}
 

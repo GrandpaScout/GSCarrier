@@ -6,7 +6,7 @@
 -- │ └─┐ └─────┘└─────┘ ┌─┘ │ --
 -- └───┘                └───┘ --
 ---@module  "Passenger Pivot Library" <GSCarrier>
----@version v0.9.6
+---@version v0.9.7
 ---@see     GrandpaScout @ https://github.com/GrandpaScout
 -- 
 
@@ -27,7 +27,7 @@
 --]] =======================================================================
 
 local ID = "GSCarrier"
-local VER = "0.9.6"
+local VER = "0.9.7"
 local FIG = {"0.1.2", "0.1.2"}
 
 
@@ -156,10 +156,17 @@ end
 ---@return Entity.any?
 function rider.getVehicle() return rider_vehicle end
 
+---Gets the id of the seat this Carrier rider is currently riding on.  
+---This is much cheaper to do than `.getSeat()` as this only gets the id.
+---
+---Returns `nil` if there is no active seat.
+---@return integer?
+function rider.getSeatID() return rider_seat and rider_seat.uid or nil end
+
 ---Gets a copy of the data for the seat of the Carrier vehicle this Carrier rider is currently riding on.
 ---@return Lib.GS.Carrier.seatData?
 function rider.getSeat()
-  if not rider_vehicle or rider_seat then return nil end
+  if not rider_seat then return nil end
 
   local tags = {}
   for t, v in rider_seat:iterateTags() do tags[t] = v end
@@ -185,7 +192,6 @@ function rider.setScale(value)
   rider_tags["scale:avatar"] = value or 1
   avatar:store("GSCarrier:rider.Tags", rider_tags)
 end
-
 
 
 avatar:store("GSCarrier:rider.Enabled", true)
@@ -308,7 +314,7 @@ events.ENTITY_INIT:register(function()
   rider_tags[tag_name] = true
   avatar:store("GSCarrier:rider.Tags", rider_tags)
   --!! END
-end)
+end, "GSCarrier:EntityInit_ClassTag")
 
 local mark_for_cleanup = {}
 

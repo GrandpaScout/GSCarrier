@@ -80,7 +80,7 @@ my_seat:setPriority(64)
 Add or remove vehicle tags with the following functions:
 ```lua
 -- Adds a tag to the Carrier vehicle with the given value (or `true` if there is none)
-Carrier.vehicle.addTag("gscarrier:horizontal")
+Carrier.vehicle.addTag("namespace:tag_name")
 Carrier.vehicle.addTag("namespace:tag_with_value", 42)
 
 -- Removes a tag from the Carrier vehicle.
@@ -112,7 +112,7 @@ Carrier.rider.removeRoots(models.model_name.path.to.part1, models.model_name.pat
 Add or remove rider tags with the following functions:
 ```lua
 -- Adds a tag to the Carrier rider with the given value (or `true` if there is none)
-Carrier.rider.addTag("gscarrier:horizontal")
+Carrier.rider.addTag("namespace:tag_name")
 Carrier.rider.addTag("namespace:tag_with_value", 42)
 
 -- Removes a tag from the Carrier rider.

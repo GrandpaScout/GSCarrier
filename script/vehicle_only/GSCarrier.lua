@@ -6,7 +6,7 @@
 -- │ └─┐ └─────┘└─────┘ ┌─┘ │ --
 -- └───┘                └───┘ --
 ---@module  "Passenger Pivot Library" <GSCarrier>
----@version v0.9.8
+---@version v0.9.9
 ---@see     GrandpaScout @ https://github.com/GrandpaScout
 -- A library that allows Figura "vehicles" to specify custom passenger pivot points and Figura "riders" to sit at those
 -- custom pivot points.
@@ -30,7 +30,7 @@
 --]] =======================================================================
 
 local ID = "GSCarrier"
-local VER = "0.9.8"
+local VER = "0.9.9"
 local FIG = {"0.1.2", "0.1.2"}
 
 
@@ -174,17 +174,7 @@ function Seat:getCallback() return self.callback end
 function Seat:getCondition() return self.condition end
 
 
----===== SETTERS =====---
-
----Sets the name of this seat.
----@generic self
----@param self self
----@param name string
----@return self
-function Seat:setName(name)
-  self.name = name
-  return self
-end
+---===== SETTERS =====--
 
 ---Gets the part this seat is using for positioning.
 ---@generic self
@@ -217,6 +207,7 @@ function Seat:getCondition(condition) self.condition = condition end
 
 ---@class Lib.GS.Carrier.SeatRemote
 ---@field uid integer
+---@field name string
 ---@field iterateTags fun(self: Lib.GS.Carrier.SeatRemote): ((fun(uid: integer, name?: Lib.GS.Carrier.seatTag): (Lib.GS.Carrier.seatTag, unknown)), integer)
 ---@field getPriority fun(self: Lib.GS.Carrier.SeatRemote): integer
 ---@field getTag fun(self: Lib.GS.Carrier.SeatRemote, name: string): unknown
@@ -396,6 +387,7 @@ function vehicle.newSeat(name, part, options)
 
   veh_remotes[uid] = {
     uid = uid,
+    name = name,
     iterateTags = remote_iterateTags,
     getPriority = remote_getPriority,
     getTag = remote_getTag,

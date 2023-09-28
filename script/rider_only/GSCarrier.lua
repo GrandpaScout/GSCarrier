@@ -6,7 +6,7 @@
 -- │ └─┐ └─────┘└─────┘ ┌─┘ │ --
 -- └───┘                └───┘ --
 ---@module  "Passenger Pivot Library" <GSCarrier>
----@version v0.9.8
+---@version v0.9.9
 ---@see     GrandpaScout @ https://github.com/GrandpaScout
 -- A library that allows Figura "vehicles" to specify custom passenger pivot points and Figura "riders" to sit at those
 -- custom pivot points.
@@ -30,7 +30,7 @@
 --]] =======================================================================
 
 local ID = "GSCarrier"
-local VER = "0.9.8"
+local VER = "0.9.9"
 local FIG = {"0.1.2", "0.1.2"}
 
 
@@ -83,6 +83,7 @@ local thismt = {
 
 ---@class Lib.GS.Carrier.SeatRemote
 ---@field uid integer
+---@field name string
 ---@field iterateTags fun(self: Lib.GS.Carrier.SeatRemote): ((fun(uid: integer, name?: Lib.GS.Carrier.seatTag): (Lib.GS.Carrier.seatTag, unknown)), integer)
 ---@field getPriority fun(self: Lib.GS.Carrier.SeatRemote): integer
 ---@field getTag fun(self: Lib.GS.Carrier.SeatRemote, name: string): unknown
@@ -110,6 +111,7 @@ local rider_tags = {["scale:avatar"] = 1, ["scale:pehkui"] = 1}
 
 ---@class Lib.GS.Carrier.seatData
 ---@field uid integer
+---@field name string
 ---@field priority integer
 ---@field tags {[Lib.GS.Carrier.seatTag]: unknown}
 
@@ -222,6 +224,13 @@ function rider.getVehicle() return rider_vehicle end
 ---@return integer?
 function rider.getSeatID() return rider_seat and rider_seat.uid or nil end
 
+---Gets the name of the seat this Carrier rider is currently riding on.  
+---This is much cheaper to do than `.getSeat()` as this only gets the id.
+---
+---Returns `nil` if there is no active seat.
+---@return string?
+function rider.getSeatName() return rider_seat and rider_seat.name or nil end
+
 ---Gets a copy of the data for the seat of the Carrier vehicle this Carrier rider is currently riding on.
 ---@return Lib.GS.Carrier.seatData?
 function rider.getSeat()
@@ -232,6 +241,7 @@ function rider.getSeat()
 
   return {
     uid = rider_seat.uid,
+    name = rider_seat.name,
     priority = rider_seat:getPriority(),
     tags = tags
   }

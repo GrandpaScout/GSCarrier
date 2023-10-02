@@ -23,9 +23,9 @@ error(
 ---@alias Lib.GS.Carrier.vehicleTag string
 ---**[CLASS]** *(Internal)*
 ---***
----This is a non-player entity.
+---This avatar is a non-player entity.
 ---
----This tag is always applied to non-player entities.
+---This tag is always applied to non-player avatars.
 ---
 ---&nbsp;  
 ---*Conflicts with:*
@@ -33,9 +33,9 @@ error(
 ---| "class:cem"
 ---**[CLASS]** *(Internal)*
 ---***
----This is a player entity.
+---This avatar is a player entity.
 ---
----This tag is always applied to player entities.
+---This tag is always applied to player avatars.
 ---
 ---&nbsp;  
 ---*Conflicts with:*
@@ -43,51 +43,68 @@ error(
 ---| "class:player"
 ---**[SHAPE]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar defaults to a vertical posture.  
+---This is mostly orthogrades.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:horizontal_posture` `shape:amorphous`
 ---| "shape:vertical_posture"
 ---**[SHAPE]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar defaults to a horizontal posture.  
+---This is mostly pronogrades.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:vertical_posture`
 ---| "shape:horizontal_posture"
 ---**[SHAPE]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
----| "shape:bipedal"
+---This avatar has a simple shape.  
+---This is common with avatars that are objects/robotic.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:horizontal_posture` `shape:vertical_posture` `shape:amorphous`
+---| "shape:simple"
 ---**[SHAPE]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
----| "shape:quadrupedal"
----**[SHAPE]**
----***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar has no definable shape.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:horizontal_posture` `shape:vertical_posture` `shape:simple`
 ---| "shape:amorphous"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar has very human-like features.
+---
+---This can be combined with other species tags to create a (species)-humanoid.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `species:anthro` `species:feral`
 ---| "species:humanoid"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar has features of an anthropomorphic animal character.
+---
+---This can be combined with other species tags to create an anthro (species).
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `species:humanoid` `species:feral`
 ---| "species:anthro"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar has features of a feral animal.
+---
+---This can be combined with other species tags to create a feral (species).
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `species:humanoid` `species:anthro`
 ---| "species:feral"
 ---**[SPECIES]**
 ---***
@@ -97,1587 +114,1919 @@ error(
 ---| "species:taur"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an amphibian or has features of one.
 ---| "species:amphibian"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a frog or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:amphibian` `species:amphibian`
 ---| "species:frog"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a salamander or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:amphibian` `species:amphibian`
 ---| "species:salamander"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an arthropod or has features of one.
 ---| "species:arthropod"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an arachnid or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod`
 ---| "species:arachnid"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a scorpion or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:arachnid`
 ---| "species:scorpion"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a spider or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:arachnid`
 ---| "species:spider"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a crustacean or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod`
 ---| "species:crustacean"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a crab or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:crustacean`
 ---| "species:crab"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a lobster or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:crustacean`
 ---| "species:lobster"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a shrimp or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:crustacean`
 ---| "species:shrimp"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an insect or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod`
 ---| "species:insect"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a beetle or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:insect`
 ---| "species:beetle"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an ant or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:insect`
 ---| "species:ant"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a bee or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:insect`
 ---| "species:bee"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a wasp or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:insect`
 ---| "species:wasp"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a butterfly or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:insect`
 ---| "species:butterfly"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a moth or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:insect`
 ---| "species:moth"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an avian or has features of one.
 ---| "species:avian"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a bird or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian`
 ---| "species:bird"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hawk or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:hawk"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an eagle or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:eagle"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a vulture or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:vulture"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a goose or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:goose"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a swan or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:swan"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a duck or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:duck"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a dove or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:dove"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pigeon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:pigeon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a corvid or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:corvid"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a crow or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird` `species:corvid`
 ---| "species:crow"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a raven or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird` `species:corvid`
 ---| "species:raven"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a jay or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird` `species:corvid`
 ---| "species:jay"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a corvid magpie or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird` `species:corvid`
 ---| "species:corvid_magpie"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a falcon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:falcon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a finch or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:finch"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a flamingo or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:flamingo"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a chicken or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:chicken"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a peafowl or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:peafowl"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a turkey or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:turkey"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a crane or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:crane"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a swallow or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:swallow"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hummingbird or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:hummingbird"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a seagull or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:seagull"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a owl or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:owl"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a parrot or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:parrot"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cockatoo or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird` `species:parrot`
 ---| "species:cockatoo"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a parakeet or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird` `species:parrot`
 ---| "species:parakeet"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a heron or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:heron"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pelican or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:pelican"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a penguin or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:penguin"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a woodpecker or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:woodpecker"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an ostrich or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:ostrich"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a robin or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:robin"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a stork or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:stork"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a toucan or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:toucan"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a phoenix or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:phoenix"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gryphon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian`
 ---| "species:gryphon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a harpy or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian`
 ---| "species:harpy"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an avali or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian`
 ---| "species:avali"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a chocobo or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian`
 ---| "species:chocobo"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a mammal or has features of one.
 ---| "species:mammal"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an antelope or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:antelope"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gazelle or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:antelope`
 ---| "species:gazelle"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a bovine or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:bovine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a buffalo or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:bovine`
 ---| "species:buffalo"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a bison or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:bovine`
 ---| "species:bison"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cow or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:bovine`
 ---| "species:cow"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a canine or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:canine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a coyote or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine`
 ---| "species:coyote"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a domestic dog or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine`
 ---| "species:dog"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a fox or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine`
 ---| "species:fox"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a jackal or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine`
 ---| "species:jackal"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a anubian_jackal or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine` `species:jackal`
 ---| "species:anubian_jackal"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a tanuki or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine`
 ---| "species:tanuki"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a wolf or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine`
 ---| "species:wolf"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is cerberus or has features of the character.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine`
 ---| "species:cerberus"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a camelid or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:camelid"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a alpaca or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:camelid`
 ---| "species:alpaca"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a camel or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:camelid`
 ---| "species:camel"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a llama or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:camelid`
 ---| "species:llama"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a caprine or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:caprine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a goat or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:caprine`
 ---| "species:goat"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a sheep or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:caprine`
 ---| "species:sheep"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cervine or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:cervine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a deer or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:cervine`
 ---| "species:deer"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an elk or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:cervine`
 ---| "species:elk"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a moose or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:cervine`
 ---| "species:moose"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a reindeer or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:cervine`
 ---| "species:reindeer"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an equine or has features of one.
 ---| "species:equine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a donkey or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:equine`
 ---| "species:donkey"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a horse or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:equine`
 ---| "species:horse"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a zebra or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:equine`
 ---| "species:zebra"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pegasus or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:equine`
 ---| "species:pegasus"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a unicorn or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:equine`
 ---| "species:unicorn"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a winged unicorn or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:equine`
 ---| "species:winged_unicorn"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a feline or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:feline"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cougar or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:feline`
 ---| "species:cougar"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a lynx or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:feline`
 ---| "species:lynx"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is anw ocelot or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:feline`
 ---| "species:ocelot"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cheetah or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:feline`
 ---| "species:cheetah"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cat or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:feline`
 ---| "species:cat"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pantherine or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:pantherine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a jaguar or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:pantherine`
 ---| "species:jaguar"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a leopard or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:pantherine`
 ---| "species:leopard"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a lion or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:pantherine`
 ---| "species:lion"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a tiger or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:pantherine`
 ---| "species:tiger"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a lagomorph or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:lagomorph"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hare or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:lagomorph`
 ---| "species:hare"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a rabbit or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:lagomorph`
 ---| "species:rabbit"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a jackalope or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:lagomorph`
 ---| "species:jackalope"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cetacean or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:cetacean"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a dolphin or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:cetacean`
 ---| "species:dolphin"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a whale or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:cetacean`
 ---| "species:whale"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pinniped or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:pinniped"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a sea_lion or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:pinniped`
 ---| "species:sea_lion"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a seal or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:pinniped`
 ---| "species:seal"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a walrus or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:pinniped`
 ---| "species:walrus"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a marsupial or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:marsupial"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a kangaroo or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:marsupial`
 ---| "species:kangaroo"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a koala or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:marsupial`
 ---| "species:koala"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an opossum or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:marsupial`
 ---| "species:opossum"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is anw echidna or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:echidna"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a platypus or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:platypus"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a mustelid or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:mustelid"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a badger or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:mustelid`
 ---| "species:badger"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a ferret or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:mustelid`
 ---| "species:ferret"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a otter or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:mustelid`
 ---| "species:otter"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a weasel or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:mustelid`
 ---| "species:weasel"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a primate or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:primate"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a ape or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:primate`
 ---| "species:ape"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gorilla or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:primate`
 ---| "species:gorilla"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a monkey or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:primate`
 ---| "species:monkey"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a rodent or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:rodent"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a beaver or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:rodent`
 ---| "species:beaver"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a chipmunk or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:rodent`
 ---| "species:chipmunk"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hamster or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:rodent`
 ---| "species:hamster"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a mouse or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:rodent`
 ---| "species:mouse"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a porcupine or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:rodent`
 ---| "species:porcupine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a rat or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:rodent`
 ---| "species:rat"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a squirrel or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:rodent`
 ---| "species:squirrel"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a porcine or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:porcine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pig or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:porcine`
 ---| "species:pig"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a boar or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:porcine`
 ---| "species:boar"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a warthog or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:porcine`
 ---| "species:warthog"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a ursid or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:ursid"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a panda or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:ursid`
 ---| "species:panda"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a bear or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:ursid`
 ---| "species:bear"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an armadillo or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:armadillo"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a bat or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:bat"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an elephant or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:elephant"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a giraffe or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:giraffe"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hedgehog or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:hedgehog"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hippopotamus or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:hippopotamus"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a human or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:human"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hyena or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:hyena"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a raccoon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:raccoon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a red_panda or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:red_panda"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a rhinoceros or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:rhinoceros"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a skunk or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:skunk"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gastropod or has features of one.
 ---| "species:gastropod"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a slug or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:gastropod` `species:gastropod`
 ---| "species:slug"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a snail or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:gastropod` `species:gastropod`
 ---| "species:snail"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cephalopod or has features of one.
 ---| "species:cephalopod"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an octopus or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:cephalopod` `species:cephalopod`
 ---| "species:octopus"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an octoling or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:cephalopod` `species:cephalopod` `species:octopus`
 ---| "species:octoling"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a squid or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:cephalopod` `species:cephalopod`
 ---| "species:squid"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an inkling or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:cephalopod` `species:cephalopod` `species:squid`
 ---| "species:inkling"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a fish or has features of one.
 ---| "species:fish"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pufferfish or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:fish` `species:fish`
 ---| "species:pufferfish"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a shark or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:fish` `species:fish`
 ---| "species:shark"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a reptile or has features of one.
 ---| "species:reptile"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an alligator or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile`
 ---| "species:alligator"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a crocodile or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile`
 ---| "species:crocodile"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a dinosaur or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile`
 ---| "species:dinosaur"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a lizard or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile`
 ---| "species:lizard"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a chameleon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile` `species:lizard`
 ---| "species:chameleon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gecko or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile` `species:lizard`
 ---| "species:gecko"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an iguana or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile` `species:lizard`
 ---| "species:iguana"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a snake or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile`
 ---| "species:snake"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a boa or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile` `species:snake`
 ---| "species:boa"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cobra or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile` `species:snake`
 ---| "species:cobra"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a python or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile` `species:snake`
 ---| "species:python"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a viper or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile` `species:snake`
 ---| "species:viper"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a turtle or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile`
 ---| "species:turtle"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a tortoise or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile`
 ---| "species:tortoise"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an angel or has features of one.
 ---| "species:angel"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a creeper or has features of one.
 ---| "species:creeper"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a dragon or has features of one.
 ---| "species:dragon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a eastern-style dragon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:dragon` `species:dragon`
 ---| "species:eastern_dragon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an ender dragon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:dragon` `species:dragon`
 ---| "species:ender_dragon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a western-style dragon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:dragon` `species:dragon`
 ---| "species:western_dragon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a wyvern or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:dragon` `species:dragon`
 ---| "species:wyvern"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a Monster Hunter wyvern/monster or has features of one.
 ---| "species:monster_hunter_monster"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a bird wyvern or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:bird_wyvern"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a brute wyvern or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:brute_wyvern"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an elder dragon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:elder_dragon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a fanged wyvern or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:fanged_wyvern"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a flying wyvern or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:flying_wyvern"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a piscine wyvern or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:piscine_wyvern"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a fanged beast or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:fanged_beast"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a snake wyvern or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:snake_wyvern"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a Monster Hunter lynian or has features of one.
 ---| "species:lynian"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a felyne or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:lynian` `species:lynian`
 ---| "species:felyne"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a palico or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:lynian` `species:lynian` `species:felyne`
 ---| "species:palico"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gajalaka or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:lynian` `species:lynian`
 ---| "species:gajalaka"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a grimalkyne or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:lynian` `species:lynian`
 ---| "species:grimalkyne"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a Monster Hunter palamute or has features of one.
 ---| "species:palamute"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a dwarf or has features of one.
 ---| "species:dwarf"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an elf or has features of one.
 ---| "species:elf"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an enderman or has features of one.
 ---| "species:enderman"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a fairy or has features of one.
 ---| "species:fairy"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a living plant or has features of one.
 ---| "species:flora_fauna"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a dryad or has features of one.
 ---| "species:dryad"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gnome or has features of one.
 ---| "species:gnome"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a goblin or has features of one.
 ---| "species:goblin"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gorgon or has features of one.
 ---| "species:gorgon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a halfling or has features of one.
 ---| "species:halfling"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hydra or has features of one.
 ---| "species:hydra"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a lamia or has features of one.
 ---| "species:lamia"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a magma cube or has features of one.
 ---| "species:magma_cube"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a manticore or has features of one.
 ---| "species:manticore"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a yoshi or has features of one.
 ---| "species:yoshi"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a naga or has features of one.
 ---| "species:naga"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a orc or has features of one.
 ---| "species:orc"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pixie or has features of one.
 ---| "species:pixie"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pokemon or has features of one.
 ---| "species:pokemon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation I pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_i"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a Lapras or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon` `species:gen_i`
+---| "species:lapras"
+---**[SPECIES]**
+---***
+---This avatar is a generation II pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_ii"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation III pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_iii"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation IV pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_iv"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation V pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_v"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation VI pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_vi"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation VII pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_vii"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation VIII pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_viii"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation IX pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_ix"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a rexouium or has features of one.
 ---| "species:rexouium"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a satyr or has features of one.
 ---| "species:satyr"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is sculk or has features of one.
 ---| "species:sculk"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a warden or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:sculk` `species:sculk`
 ---| "species:warden"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a slime or has features of one.
 ---| "species:slime"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a sphinx or has features of one.
 ---| "species:sphinx"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a spirit or has features of one.
 ---| "species:spirit"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a ghost or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:spirit` `species:spirit`
 ---| "species:ghost"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a tiefling or has features of one.
 ---| "species:tiefling"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an undead or has features of one.
 ---| "species:undead"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a skeleton or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead`
 ---| "species:skeleton"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a stray or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead` `species:skeleton`
 ---| "species:stray"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a wither skeleton or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead` `species:skeleton`
 ---| "species:wither_skeleton"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a mummy or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead`
 ---| "species:mummy"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a wither or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead`
 ---| "species:wither"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a zombie or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead`
 ---| "species:zombie"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a drowned or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead` `species:zombie`
 ---| "species:drowned"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a husk or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead` `species:zombie`
 ---| "species:husk"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a zombified_piglin or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead` `species:zombie`
 ---| "species:zombified_piglin"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a xenomorph or has features of one.
 ---| "species:xenomorph"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a yeti or has features of one.
 ---| "species:yeti"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a machine or has features of one.
 ---| "species:machine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a robot or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:machine` `species:machine`
 ---| "species:robot"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an object.
 ---| "species:object"
 ---**[OBJECT]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pokeball or is inside a pokeball.
 ---| "object:pokeball"
 ---**[TERRAIN]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar prefers to live or travel on land.
 ---| "terrain:land"
 ---**[TERRAIN]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar prefers to live or travel on water.
 ---| "terrain:water"
 ---**[TERRAIN]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar prefers to live or travel underwater.
 ---| "terrain:underwater"
 ---**[TERRAIN]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar prefers to live or travel in air.
 ---| "terrain:air"
 
 
@@ -1693,51 +2042,75 @@ error(
 ---@alias Lib.GS.Carrier.seatTag string
 ---**[POSITION]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This seat is placed very high off the ground.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `position:low`
 ---| "position:high"
 ---**[POSITION]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This seat is placed very low to the ground.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `position:high`
 ---| "position:low"
 ---**[SHAPE]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This seat is flat.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:chair` `shape:mounted` `shape:piggyback` `shape:bridal_carry` `shape:hanging` `shape:floating`
 ---| "shape:flat"
 ---**[SHAPE]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This seat has room for the legs to hang down as if the rider was sitting in a chair
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:flat` `shape:mounted` `shape:piggyback` `shape:bridal_carry` `shape:hanging` `shape:floating`
 ---| "shape:chair"
 ---**[SHAPE]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This seat is mounted on the back of something like a saddle.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:flat` `shape:chair` `shape:piggyback` `shape:bridal_carry` `shape:hanging` `shape:floating`
 ---| "shape:mounted"
 ---**[SHAPE]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This "seat" causes the rider to be carried piggyback-style.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:flat` `shape:chair` `shape:mounted` `shape:bridal_carry` `shape:hanging` `shape:floating`
 ---| "shape:piggyback"
 ---**[SHAPE]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This "seat" causes the rider to be held in a bridal carry.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:flat` `shape:chair` `shape:mounted` `shape:piggyback` `shape:hanging` `shape:floating`
+---| "shape:bridal_carry"
+---**[SHAPE]**
+---***
+---This "seat" causes the rider to hang off of something.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:flat` `shape:chair` `shape:mounted` `shape:piggyback` `shape:bridal_carry` `shape:floating`
 ---| "shape:hanging"
 ---**[SHAPE]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This "seat" causes the rider to float in the air.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:flat` `shape:chair` `shape:mounted` `shape:piggyback` `shape:bridal_carry` `shape:hanging`
 ---| "shape:floating"
 
 
@@ -1753,9 +2126,9 @@ error(
 ---@alias Lib.GS.Carrier.riderTag string
 ---**[CLASS]** *(Internal)*
 ---***
----This is a non-player entity.
+---This avatar is a non-player entity.
 ---
----This tag is always applied to non-player entities.
+---This tag is always applied to non-player avatars.
 ---
 ---&nbsp;  
 ---*Conflicts with:*
@@ -1763,9 +2136,9 @@ error(
 ---| "class:cem"
 ---**[CLASS]** *(Internal)*
 ---***
----This is a player entity.
+---This avatar is a player entity.
 ---
----This tag is always applied to player entities.
+---This tag is always applied to player avatars.
 ---
 ---&nbsp;  
 ---*Conflicts with:*
@@ -1773,51 +2146,68 @@ error(
 ---| "class:player"
 ---**[SHAPE]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar defaults to a vertical posture.  
+---This is mostly orthogrades.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:horizontal_posture` `shape:amorphous`
 ---| "shape:vertical_posture"
 ---**[SHAPE]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar defaults to a horizontal posture.  
+---This is mostly pronogrades.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:vertical_posture`
 ---| "shape:horizontal_posture"
 ---**[SHAPE]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
----| "shape:bipedal"
+---This avatar has a simple shape.  
+---This is common with avatars that are objects/robotic.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:horizontal_posture` `shape:vertical_posture` `shape:amorphous`
+---| "shape:simple"
 ---**[SHAPE]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
----| "shape:quadrupedal"
----**[SHAPE]**
----***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar has no definable shape.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `shape:horizontal_posture` `shape:vertical_posture` `shape:simple`
 ---| "shape:amorphous"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar has very human-like features.
+---
+---This can be combined with other species tags to create a (species)-humanoid.
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `species:anthro` `species:feral`
 ---| "species:humanoid"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar has features of an anthropomorphic animal character.
+---
+---This can be combined with other species tags to create an anthro (species).
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `species:humanoid` `species:feral`
 ---| "species:anthro"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar has features of a feral animal.
+---
+---This can be combined with other species tags to create a feral (species).
+---
+---&nbsp;  
+---*Conflicts with:*
+---> `species:humanoid` `species:anthro`
 ---| "species:feral"
 ---**[SPECIES]**
 ---***
@@ -1827,1561 +2217,1901 @@ error(
 ---| "species:taur"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an amphibian or has features of one.
 ---| "species:amphibian"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a frog or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:amphibian` `species:amphibian`
 ---| "species:frog"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a salamander or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:amphibian` `species:amphibian`
 ---| "species:salamander"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an arthropod or has features of one.
 ---| "species:arthropod"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an arachnid or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod`
 ---| "species:arachnid"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a scorpion or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:arachnid`
 ---| "species:scorpion"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a spider or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:arachnid`
 ---| "species:spider"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a crustacean or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod`
 ---| "species:crustacean"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a crab or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:crustacean`
 ---| "species:crab"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a lobster or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:crustacean`
 ---| "species:lobster"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a shrimp or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:crustacean`
 ---| "species:shrimp"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an insect or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod`
 ---| "species:insect"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a beetle or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:insect`
 ---| "species:beetle"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an ant or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:insect`
 ---| "species:ant"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a bee or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:insect`
 ---| "species:bee"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a wasp or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:insect`
 ---| "species:wasp"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a butterfly or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:insect`
 ---| "species:butterfly"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a moth or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:arthropod` `species:arthropod` `species:insect`
 ---| "species:moth"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an avian or has features of one.
 ---| "species:avian"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a bird or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian`
 ---| "species:bird"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hawk or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:hawk"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an eagle or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:eagle"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a vulture or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:vulture"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a goose or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:goose"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a swan or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:swan"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a duck or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:duck"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a dove or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:dove"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pigeon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:pigeon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a corvid or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:corvid"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a crow or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird` `species:corvid`
 ---| "species:crow"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a raven or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird` `species:corvid`
 ---| "species:raven"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a jay or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird` `species:corvid`
 ---| "species:jay"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a corvid magpie or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird` `species:corvid`
 ---| "species:corvid_magpie"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a falcon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:falcon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a finch or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:finch"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a flamingo or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:flamingo"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a chicken or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:chicken"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a peafowl or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:peafowl"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a turkey or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:turkey"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a crane or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:crane"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a swallow or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:swallow"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hummingbird or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:hummingbird"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a seagull or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:seagull"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a owl or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:owl"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a parrot or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:parrot"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cockatoo or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird` `species:parrot`
 ---| "species:cockatoo"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a parakeet or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird` `species:parrot`
 ---| "species:parakeet"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a heron or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:heron"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pelican or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:pelican"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a penguin or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:penguin"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a woodpecker or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:woodpecker"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an ostrich or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:ostrich"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a robin or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:robin"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a stork or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:stork"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a toucan or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:toucan"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a phoenix or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian` `species:bird`
 ---| "species:phoenix"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gryphon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian`
 ---| "species:gryphon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a harpy or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian`
 ---| "species:harpy"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an avali or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian`
 ---| "species:avali"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a chocobo or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:avian` `species:avian`
 ---| "species:chocobo"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a mammal or has features of one.
 ---| "species:mammal"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an antelope or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:antelope"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gazelle or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:antelope`
 ---| "species:gazelle"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a bovine or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:bovine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a buffalo or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:bovine`
 ---| "species:buffalo"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a bison or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:bovine`
 ---| "species:bison"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cow or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:bovine`
 ---| "species:cow"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a canine or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:canine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a coyote or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine`
 ---| "species:coyote"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a domestic dog or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine`
 ---| "species:dog"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a fox or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine`
 ---| "species:fox"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a jackal or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine`
 ---| "species:jackal"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a anubian_jackal or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine` `species:jackal`
 ---| "species:anubian_jackal"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a tanuki or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine`
 ---| "species:tanuki"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a wolf or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine`
 ---| "species:wolf"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is cerberus or has features of the character.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:canine`
 ---| "species:cerberus"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a camelid or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:camelid"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a alpaca or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:camelid`
 ---| "species:alpaca"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a camel or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:camelid`
 ---| "species:camel"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a llama or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:camelid`
 ---| "species:llama"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a caprine or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:caprine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a goat or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:caprine`
 ---| "species:goat"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a sheep or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:caprine`
 ---| "species:sheep"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cervine or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:cervine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a deer or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:cervine`
 ---| "species:deer"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an elk or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:cervine`
 ---| "species:elk"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a moose or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:cervine`
 ---| "species:moose"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a reindeer or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:cervine`
 ---| "species:reindeer"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an equine or has features of one.
 ---| "species:equine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a donkey or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:equine`
 ---| "species:donkey"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a horse or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:equine`
 ---| "species:horse"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a zebra or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:equine`
 ---| "species:zebra"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pegasus or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:equine`
 ---| "species:pegasus"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a unicorn or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:equine`
 ---| "species:unicorn"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a winged unicorn or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:equine`
 ---| "species:winged_unicorn"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a feline or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:feline"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cougar or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:feline`
 ---| "species:cougar"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a lynx or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:feline`
 ---| "species:lynx"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is anw ocelot or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:feline`
 ---| "species:ocelot"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cheetah or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:feline`
 ---| "species:cheetah"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cat or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:feline`
 ---| "species:cat"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pantherine or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:pantherine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a jaguar or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:pantherine`
 ---| "species:jaguar"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a leopard or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:pantherine`
 ---| "species:leopard"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a lion or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:pantherine`
 ---| "species:lion"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a tiger or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:pantherine`
 ---| "species:tiger"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a lagomorph or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:lagomorph"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hare or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:lagomorph`
 ---| "species:hare"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a rabbit or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:lagomorph`
 ---| "species:rabbit"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a jackalope or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:lagomorph`
 ---| "species:jackalope"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cetacean or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:cetacean"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a dolphin or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:cetacean`
 ---| "species:dolphin"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a whale or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:cetacean`
 ---| "species:whale"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pinniped or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:pinniped"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a sea_lion or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:pinniped`
 ---| "species:sea_lion"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a seal or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:pinniped`
 ---| "species:seal"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a walrus or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:pinniped`
 ---| "species:walrus"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a marsupial or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:marsupial"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a kangaroo or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:marsupial`
 ---| "species:kangaroo"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a koala or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:marsupial`
 ---| "species:koala"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an opossum or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:marsupial`
 ---| "species:opossum"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is anw echidna or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:echidna"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a platypus or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:platypus"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a mustelid or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:mustelid"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a badger or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:mustelid`
 ---| "species:badger"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a ferret or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:mustelid`
 ---| "species:ferret"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a otter or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:mustelid`
 ---| "species:otter"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a weasel or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:mustelid`
 ---| "species:weasel"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a primate or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:primate"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a ape or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:primate`
 ---| "species:ape"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gorilla or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:primate`
 ---| "species:gorilla"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a monkey or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:primate`
 ---| "species:monkey"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a rodent or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:rodent"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a beaver or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:rodent`
 ---| "species:beaver"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a chipmunk or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:rodent`
 ---| "species:chipmunk"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hamster or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:rodent`
 ---| "species:hamster"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a mouse or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:rodent`
 ---| "species:mouse"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a porcupine or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:rodent`
 ---| "species:porcupine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a rat or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:rodent`
 ---| "species:rat"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a squirrel or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:rodent`
 ---| "species:squirrel"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a porcine or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:porcine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pig or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:porcine`
 ---| "species:pig"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a boar or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:porcine`
 ---| "species:boar"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a warthog or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:porcine`
 ---| "species:warthog"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a ursid or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:ursid"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a panda or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:ursid`
 ---| "species:panda"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a bear or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal` `species:ursid`
 ---| "species:bear"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an armadillo or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:armadillo"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a bat or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:bat"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an elephant or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:elephant"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a giraffe or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:giraffe"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hedgehog or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:hedgehog"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hippopotamus or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:hippopotamus"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a human or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:human"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hyena or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:hyena"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a raccoon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:raccoon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a red_panda or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:red_panda"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a rhinoceros or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:rhinoceros"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a skunk or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:mammal` `species:mammal`
 ---| "species:skunk"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gastropod or has features of one.
 ---| "species:gastropod"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a slug or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:gastropod` `species:gastropod`
 ---| "species:slug"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a snail or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:gastropod` `species:gastropod`
 ---| "species:snail"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cephalopod or has features of one.
 ---| "species:cephalopod"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an octopus or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:cephalopod` `species:cephalopod`
 ---| "species:octopus"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an octoling or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:cephalopod` `species:cephalopod` `species:octopus`
 ---| "species:octoling"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a squid or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:cephalopod` `species:cephalopod`
 ---| "species:squid"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an inkling or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:cephalopod` `species:cephalopod` `species:squid`
 ---| "species:inkling"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a fish or has features of one.
 ---| "species:fish"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pufferfish or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:fish` `species:fish`
 ---| "species:pufferfish"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a shark or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:fish` `species:fish`
 ---| "species:shark"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a reptile or has features of one.
 ---| "species:reptile"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an alligator or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile`
 ---| "species:alligator"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a crocodile or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile`
 ---| "species:crocodile"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a dinosaur or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile`
 ---| "species:dinosaur"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a lizard or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile`
 ---| "species:lizard"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a chameleon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile` `species:lizard`
 ---| "species:chameleon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gecko or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile` `species:lizard`
 ---| "species:gecko"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an iguana or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile` `species:lizard`
 ---| "species:iguana"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a snake or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile`
 ---| "species:snake"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a boa or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile` `species:snake`
 ---| "species:boa"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a cobra or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile` `species:snake`
 ---| "species:cobra"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a python or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile` `species:snake`
 ---| "species:python"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a viper or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile` `species:snake`
 ---| "species:viper"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a turtle or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile`
 ---| "species:turtle"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a tortoise or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:reptile` `species:reptile`
 ---| "species:tortoise"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an angel or has features of one.
 ---| "species:angel"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a creeper or has features of one.
 ---| "species:creeper"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a dragon or has features of one.
 ---| "species:dragon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a eastern-style dragon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:dragon` `species:dragon`
 ---| "species:eastern_dragon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an ender dragon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:dragon` `species:dragon`
 ---| "species:ender_dragon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a western-style dragon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:dragon` `species:dragon`
 ---| "species:western_dragon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a wyvern or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:dragon` `species:dragon`
 ---| "species:wyvern"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a Monster Hunter wyvern/monster or has features of one.
 ---| "species:monster_hunter_monster"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a bird wyvern or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:bird_wyvern"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a brute wyvern or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:brute_wyvern"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an elder dragon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:elder_dragon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a fanged wyvern or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:fanged_wyvern"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a flying wyvern or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:flying_wyvern"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a piscine wyvern or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:piscine_wyvern"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a fanged beast or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:fanged_beast"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a snake wyvern or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:monster_hunter_monster` `species:monster_hunter_monster`
 ---| "species:snake_wyvern"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a Monster Hunter lynian or has features of one.
 ---| "species:lynian"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a felyne or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:lynian` `species:lynian`
 ---| "species:felyne"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a palico or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:lynian` `species:lynian` `species:felyne`
 ---| "species:palico"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gajalaka or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:lynian` `species:lynian`
 ---| "species:gajalaka"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a grimalkyne or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:lynian` `species:lynian`
 ---| "species:grimalkyne"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a Monster Hunter palamute or has features of one.
 ---| "species:palamute"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a dwarf or has features of one.
 ---| "species:dwarf"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an elf or has features of one.
 ---| "species:elf"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an enderman or has features of one.
 ---| "species:enderman"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a fairy or has features of one.
 ---| "species:fairy"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a living plant or has features of one.
 ---| "species:flora_fauna"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a dryad or has features of one.
 ---| "species:dryad"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gnome or has features of one.
 ---| "species:gnome"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a goblin or has features of one.
 ---| "species:goblin"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a gorgon or has features of one.
 ---| "species:gorgon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a halfling or has features of one.
 ---| "species:halfling"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a hydra or has features of one.
 ---| "species:hydra"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a lamia or has features of one.
 ---| "species:lamia"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a magma cube or has features of one.
 ---| "species:magma_cube"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a manticore or has features of one.
 ---| "species:manticore"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a yoshi or has features of one.
 ---| "species:yoshi"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a naga or has features of one.
 ---| "species:naga"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a orc or has features of one.
 ---| "species:orc"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pixie or has features of one.
 ---| "species:pixie"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pokemon or has features of one.
 ---| "species:pokemon"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation I pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_i"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a Lapras or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon` `species:gen_i`
+---| "species:lapras"
+---**[SPECIES]**
+---***
+---This avatar is a generation II pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_ii"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation III pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_iii"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation IV pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_iv"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation V pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_v"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation VI pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_vi"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation VII pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_vii"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation VIII pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_viii"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a generation IX pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon` `species:pokemon`
 ---| "species:gen_ix"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a rexouium or has features of one.
 ---| "species:rexouium"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a satyr or has features of one.
 ---| "species:satyr"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is sculk or has features of one.
 ---| "species:sculk"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a warden or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:sculk` `species:sculk`
 ---| "species:warden"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a slime or has features of one.
 ---| "species:slime"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a sphinx or has features of one.
 ---| "species:sphinx"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a spirit or has features of one.
 ---| "species:spirit"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a ghost or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:spirit` `species:spirit`
 ---| "species:ghost"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a tiefling or has features of one.
 ---| "species:tiefling"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an undead or has features of one.
 ---| "species:undead"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a skeleton or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead`
 ---| "species:skeleton"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a stray or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead` `species:skeleton`
 ---| "species:stray"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a wither skeleton or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead` `species:skeleton`
 ---| "species:wither_skeleton"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a mummy or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead`
 ---| "species:mummy"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a wither or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead`
 ---| "species:wither"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a zombie or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead`
 ---| "species:zombie"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a drowned or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead` `species:zombie`
 ---| "species:drowned"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a husk or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead` `species:zombie`
 ---| "species:husk"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a zombified_piglin or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:undead` `species:undead` `species:zombie`
 ---| "species:zombified_piglin"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a xenomorph or has features of one.
 ---| "species:xenomorph"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a yeti or has features of one.
 ---| "species:yeti"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a machine or has features of one.
 ---| "species:machine"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a robot or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:machine` `species:machine`
 ---| "species:robot"
 ---**[SPECIES]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is an object.
 ---| "species:object"
 ---**[OBJECT]**
 ---***
----```yaml
----  !!TAG_DATA_MISSING!!
----```
+---This avatar is a pokeball or is inside a pokeball.
 ---| "object:pokeball"

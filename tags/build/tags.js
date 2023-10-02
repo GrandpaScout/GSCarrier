@@ -248,7 +248,7 @@ const species_tags = [
   "species:enderman",
   "species:fairy",
   "species:flora_fauna",
-    "species:dryad",
+  "species:dryad",
   "species:gnome",
   "species:goblin",
   "species:gorgon",
@@ -264,6 +264,8 @@ const species_tags = [
   "species:pokemon",
     // Do I even dare?
     "species:gen_i",
+      // For you, Total.
+      "species:lapras",
     "species:gen_ii",
     "species:gen_iii",
     "species:gen_iv",
@@ -290,7 +292,7 @@ const species_tags = [
     "species:zombie",
       "species:drowned",
       "species:husk",
-    "species:zombified_piglin",
+      "species:zombified_piglin",
   "species:xenomorph",
   "species:yeti",
   // Non-species
@@ -330,6 +332,7 @@ module.exports = {
     "shape:chair",
     "shape:mounted",
     "shape:piggyback",
+    "shape:bridal_carry",
     "shape:hanging",
     "shape:floating",
   ],

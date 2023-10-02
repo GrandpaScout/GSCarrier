@@ -122,7 +122,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:amphibian` `species:amphibian`
+---> `species:amphibian`
 ---| "species:frog"
 ---**[SPECIES]**
 ---***
@@ -130,7 +130,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:amphibian` `species:amphibian`
+---> `species:amphibian`
 ---| "species:salamander"
 ---**[SPECIES]**
 ---***
@@ -142,7 +142,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod`
+---> `species:arthropod`
 ---| "species:arachnid"
 ---**[SPECIES]**
 ---***
@@ -150,7 +150,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:arachnid`
+---> `species:arthropod` `species:arachnid`
 ---| "species:scorpion"
 ---**[SPECIES]**
 ---***
@@ -158,7 +158,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:arachnid`
+---> `species:arthropod` `species:arachnid`
 ---| "species:spider"
 ---**[SPECIES]**
 ---***
@@ -166,7 +166,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod`
+---> `species:arthropod`
 ---| "species:crustacean"
 ---**[SPECIES]**
 ---***
@@ -174,7 +174,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:crustacean`
+---> `species:arthropod` `species:crustacean`
 ---| "species:crab"
 ---**[SPECIES]**
 ---***
@@ -182,7 +182,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:crustacean`
+---> `species:arthropod` `species:crustacean`
 ---| "species:lobster"
 ---**[SPECIES]**
 ---***
@@ -190,7 +190,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:crustacean`
+---> `species:arthropod` `species:crustacean`
 ---| "species:shrimp"
 ---**[SPECIES]**
 ---***
@@ -198,7 +198,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod`
+---> `species:arthropod`
 ---| "species:insect"
 ---**[SPECIES]**
 ---***
@@ -206,7 +206,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:insect`
+---> `species:arthropod` `species:insect`
 ---| "species:beetle"
 ---**[SPECIES]**
 ---***
@@ -214,7 +214,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:insect`
+---> `species:arthropod` `species:insect`
 ---| "species:ant"
 ---**[SPECIES]**
 ---***
@@ -222,7 +222,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:insect`
+---> `species:arthropod` `species:insect`
 ---| "species:bee"
 ---**[SPECIES]**
 ---***
@@ -230,7 +230,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:insect`
+---> `species:arthropod` `species:insect`
 ---| "species:wasp"
 ---**[SPECIES]**
 ---***
@@ -238,7 +238,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:insect`
+---> `species:arthropod` `species:insect`
 ---| "species:butterfly"
 ---**[SPECIES]**
 ---***
@@ -246,7 +246,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:insect`
+---> `species:arthropod` `species:insect`
 ---| "species:moth"
 ---**[SPECIES]**
 ---***
@@ -258,7 +258,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian`
+---> `species:avian`
 ---| "species:bird"
 ---**[SPECIES]**
 ---***
@@ -266,7 +266,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:hawk"
 ---**[SPECIES]**
 ---***
@@ -274,7 +274,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:eagle"
 ---**[SPECIES]**
 ---***
@@ -282,7 +282,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:vulture"
 ---**[SPECIES]**
 ---***
@@ -290,7 +290,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:goose"
 ---**[SPECIES]**
 ---***
@@ -298,7 +298,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:swan"
 ---**[SPECIES]**
 ---***
@@ -306,7 +306,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:duck"
 ---**[SPECIES]**
 ---***
@@ -314,7 +314,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:dove"
 ---**[SPECIES]**
 ---***
@@ -322,7 +322,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:pigeon"
 ---**[SPECIES]**
 ---***
@@ -330,7 +330,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:corvid"
 ---**[SPECIES]**
 ---***
@@ -338,7 +338,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird` `species:corvid`
+---> `species:avian` `species:bird` `species:corvid`
 ---| "species:crow"
 ---**[SPECIES]**
 ---***
@@ -346,7 +346,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird` `species:corvid`
+---> `species:avian` `species:bird` `species:corvid`
 ---| "species:raven"
 ---**[SPECIES]**
 ---***
@@ -354,7 +354,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird` `species:corvid`
+---> `species:avian` `species:bird` `species:corvid`
 ---| "species:jay"
 ---**[SPECIES]**
 ---***
@@ -362,7 +362,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird` `species:corvid`
+---> `species:avian` `species:bird` `species:corvid`
 ---| "species:corvid_magpie"
 ---**[SPECIES]**
 ---***
@@ -370,7 +370,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:falcon"
 ---**[SPECIES]**
 ---***
@@ -378,7 +378,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:finch"
 ---**[SPECIES]**
 ---***
@@ -386,7 +386,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:flamingo"
 ---**[SPECIES]**
 ---***
@@ -394,7 +394,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:chicken"
 ---**[SPECIES]**
 ---***
@@ -402,7 +402,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:peafowl"
 ---**[SPECIES]**
 ---***
@@ -410,7 +410,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:turkey"
 ---**[SPECIES]**
 ---***
@@ -418,7 +418,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:crane"
 ---**[SPECIES]**
 ---***
@@ -426,7 +426,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:swallow"
 ---**[SPECIES]**
 ---***
@@ -434,7 +434,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:hummingbird"
 ---**[SPECIES]**
 ---***
@@ -442,7 +442,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:seagull"
 ---**[SPECIES]**
 ---***
@@ -450,7 +450,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:owl"
 ---**[SPECIES]**
 ---***
@@ -458,7 +458,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:parrot"
 ---**[SPECIES]**
 ---***
@@ -466,7 +466,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird` `species:parrot`
+---> `species:avian` `species:bird` `species:parrot`
 ---| "species:cockatoo"
 ---**[SPECIES]**
 ---***
@@ -474,7 +474,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird` `species:parrot`
+---> `species:avian` `species:bird` `species:parrot`
 ---| "species:parakeet"
 ---**[SPECIES]**
 ---***
@@ -482,7 +482,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:heron"
 ---**[SPECIES]**
 ---***
@@ -490,7 +490,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:pelican"
 ---**[SPECIES]**
 ---***
@@ -498,7 +498,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:penguin"
 ---**[SPECIES]**
 ---***
@@ -506,7 +506,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:woodpecker"
 ---**[SPECIES]**
 ---***
@@ -514,7 +514,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:ostrich"
 ---**[SPECIES]**
 ---***
@@ -522,7 +522,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:robin"
 ---**[SPECIES]**
 ---***
@@ -530,7 +530,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:stork"
 ---**[SPECIES]**
 ---***
@@ -538,7 +538,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:toucan"
 ---**[SPECIES]**
 ---***
@@ -546,7 +546,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:phoenix"
 ---**[SPECIES]**
 ---***
@@ -554,7 +554,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian`
+---> `species:avian`
 ---| "species:gryphon"
 ---**[SPECIES]**
 ---***
@@ -562,7 +562,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian`
+---> `species:avian`
 ---| "species:harpy"
 ---**[SPECIES]**
 ---***
@@ -570,7 +570,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian`
+---> `species:avian`
 ---| "species:avali"
 ---**[SPECIES]**
 ---***
@@ -578,7 +578,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian`
+---> `species:avian`
 ---| "species:chocobo"
 ---**[SPECIES]**
 ---***
@@ -590,7 +590,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:antelope"
 ---**[SPECIES]**
 ---***
@@ -598,7 +598,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:antelope`
+---> `species:mammal` `species:antelope`
 ---| "species:gazelle"
 ---**[SPECIES]**
 ---***
@@ -606,7 +606,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:bovine"
 ---**[SPECIES]**
 ---***
@@ -614,7 +614,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:bovine`
+---> `species:mammal` `species:bovine`
 ---| "species:buffalo"
 ---**[SPECIES]**
 ---***
@@ -622,7 +622,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:bovine`
+---> `species:mammal` `species:bovine`
 ---| "species:bison"
 ---**[SPECIES]**
 ---***
@@ -630,7 +630,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:bovine`
+---> `species:mammal` `species:bovine`
 ---| "species:cow"
 ---**[SPECIES]**
 ---***
@@ -638,7 +638,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:canine"
 ---**[SPECIES]**
 ---***
@@ -646,7 +646,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine`
+---> `species:mammal` `species:canine`
 ---| "species:coyote"
 ---**[SPECIES]**
 ---***
@@ -654,7 +654,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine`
+---> `species:mammal` `species:canine`
 ---| "species:dog"
 ---**[SPECIES]**
 ---***
@@ -662,7 +662,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine`
+---> `species:mammal` `species:canine`
 ---| "species:fox"
 ---**[SPECIES]**
 ---***
@@ -670,7 +670,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine`
+---> `species:mammal` `species:canine`
 ---| "species:jackal"
 ---**[SPECIES]**
 ---***
@@ -678,7 +678,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine` `species:jackal`
+---> `species:mammal` `species:canine` `species:jackal`
 ---| "species:anubian_jackal"
 ---**[SPECIES]**
 ---***
@@ -686,7 +686,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine`
+---> `species:mammal` `species:canine`
 ---| "species:tanuki"
 ---**[SPECIES]**
 ---***
@@ -694,7 +694,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine`
+---> `species:mammal` `species:canine`
 ---| "species:wolf"
 ---**[SPECIES]**
 ---***
@@ -702,7 +702,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine`
+---> `species:mammal` `species:canine`
 ---| "species:cerberus"
 ---**[SPECIES]**
 ---***
@@ -710,7 +710,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:camelid"
 ---**[SPECIES]**
 ---***
@@ -718,7 +718,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:camelid`
+---> `species:mammal` `species:camelid`
 ---| "species:alpaca"
 ---**[SPECIES]**
 ---***
@@ -726,7 +726,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:camelid`
+---> `species:mammal` `species:camelid`
 ---| "species:camel"
 ---**[SPECIES]**
 ---***
@@ -734,7 +734,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:camelid`
+---> `species:mammal` `species:camelid`
 ---| "species:llama"
 ---**[SPECIES]**
 ---***
@@ -742,7 +742,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:caprine"
 ---**[SPECIES]**
 ---***
@@ -750,7 +750,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:caprine`
+---> `species:mammal` `species:caprine`
 ---| "species:goat"
 ---**[SPECIES]**
 ---***
@@ -758,7 +758,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:caprine`
+---> `species:mammal` `species:caprine`
 ---| "species:sheep"
 ---**[SPECIES]**
 ---***
@@ -766,7 +766,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:cervine"
 ---**[SPECIES]**
 ---***
@@ -774,7 +774,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:cervine`
+---> `species:mammal` `species:cervine`
 ---| "species:deer"
 ---**[SPECIES]**
 ---***
@@ -782,7 +782,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:cervine`
+---> `species:mammal` `species:cervine`
 ---| "species:elk"
 ---**[SPECIES]**
 ---***
@@ -790,7 +790,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:cervine`
+---> `species:mammal` `species:cervine`
 ---| "species:moose"
 ---**[SPECIES]**
 ---***
@@ -798,7 +798,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:cervine`
+---> `species:mammal` `species:cervine`
 ---| "species:reindeer"
 ---**[SPECIES]**
 ---***
@@ -858,7 +858,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:feline"
 ---**[SPECIES]**
 ---***
@@ -866,7 +866,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:feline`
+---> `species:mammal` `species:feline`
 ---| "species:cougar"
 ---**[SPECIES]**
 ---***
@@ -874,7 +874,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:feline`
+---> `species:mammal` `species:feline`
 ---| "species:lynx"
 ---**[SPECIES]**
 ---***
@@ -882,7 +882,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:feline`
+---> `species:mammal` `species:feline`
 ---| "species:ocelot"
 ---**[SPECIES]**
 ---***
@@ -890,7 +890,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:feline`
+---> `species:mammal` `species:feline`
 ---| "species:cheetah"
 ---**[SPECIES]**
 ---***
@@ -898,7 +898,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:feline`
+---> `species:mammal` `species:feline`
 ---| "species:cat"
 ---**[SPECIES]**
 ---***
@@ -906,7 +906,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:pantherine"
 ---**[SPECIES]**
 ---***
@@ -914,7 +914,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:pantherine`
+---> `species:mammal` `species:pantherine`
 ---| "species:jaguar"
 ---**[SPECIES]**
 ---***
@@ -922,7 +922,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:pantherine`
+---> `species:mammal` `species:pantherine`
 ---| "species:leopard"
 ---**[SPECIES]**
 ---***
@@ -930,7 +930,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:pantherine`
+---> `species:mammal` `species:pantherine`
 ---| "species:lion"
 ---**[SPECIES]**
 ---***
@@ -938,7 +938,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:pantherine`
+---> `species:mammal` `species:pantherine`
 ---| "species:tiger"
 ---**[SPECIES]**
 ---***
@@ -946,7 +946,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:lagomorph"
 ---**[SPECIES]**
 ---***
@@ -954,7 +954,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:lagomorph`
+---> `species:mammal` `species:lagomorph`
 ---| "species:hare"
 ---**[SPECIES]**
 ---***
@@ -962,7 +962,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:lagomorph`
+---> `species:mammal` `species:lagomorph`
 ---| "species:rabbit"
 ---**[SPECIES]**
 ---***
@@ -970,7 +970,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:lagomorph`
+---> `species:mammal` `species:lagomorph`
 ---| "species:jackalope"
 ---**[SPECIES]**
 ---***
@@ -978,7 +978,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:cetacean"
 ---**[SPECIES]**
 ---***
@@ -986,7 +986,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:cetacean`
+---> `species:mammal` `species:cetacean`
 ---| "species:dolphin"
 ---**[SPECIES]**
 ---***
@@ -994,7 +994,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:cetacean`
+---> `species:mammal` `species:cetacean`
 ---| "species:whale"
 ---**[SPECIES]**
 ---***
@@ -1002,7 +1002,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:pinniped"
 ---**[SPECIES]**
 ---***
@@ -1010,7 +1010,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:pinniped`
+---> `species:mammal` `species:pinniped`
 ---| "species:sea_lion"
 ---**[SPECIES]**
 ---***
@@ -1018,7 +1018,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:pinniped`
+---> `species:mammal` `species:pinniped`
 ---| "species:seal"
 ---**[SPECIES]**
 ---***
@@ -1026,7 +1026,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:pinniped`
+---> `species:mammal` `species:pinniped`
 ---| "species:walrus"
 ---**[SPECIES]**
 ---***
@@ -1034,7 +1034,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:marsupial"
 ---**[SPECIES]**
 ---***
@@ -1042,7 +1042,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:marsupial`
+---> `species:mammal` `species:marsupial`
 ---| "species:kangaroo"
 ---**[SPECIES]**
 ---***
@@ -1050,7 +1050,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:marsupial`
+---> `species:mammal` `species:marsupial`
 ---| "species:koala"
 ---**[SPECIES]**
 ---***
@@ -1058,7 +1058,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:marsupial`
+---> `species:mammal` `species:marsupial`
 ---| "species:opossum"
 ---**[SPECIES]**
 ---***
@@ -1066,7 +1066,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:echidna"
 ---**[SPECIES]**
 ---***
@@ -1074,7 +1074,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:platypus"
 ---**[SPECIES]**
 ---***
@@ -1082,7 +1082,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:mustelid"
 ---**[SPECIES]**
 ---***
@@ -1090,7 +1090,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:mustelid`
+---> `species:mammal` `species:mustelid`
 ---| "species:badger"
 ---**[SPECIES]**
 ---***
@@ -1098,7 +1098,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:mustelid`
+---> `species:mammal` `species:mustelid`
 ---| "species:ferret"
 ---**[SPECIES]**
 ---***
@@ -1106,7 +1106,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:mustelid`
+---> `species:mammal` `species:mustelid`
 ---| "species:otter"
 ---**[SPECIES]**
 ---***
@@ -1114,7 +1114,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:mustelid`
+---> `species:mammal` `species:mustelid`
 ---| "species:weasel"
 ---**[SPECIES]**
 ---***
@@ -1122,7 +1122,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:primate"
 ---**[SPECIES]**
 ---***
@@ -1130,7 +1130,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:primate`
+---> `species:mammal` `species:primate`
 ---| "species:ape"
 ---**[SPECIES]**
 ---***
@@ -1138,7 +1138,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:primate`
+---> `species:mammal` `species:primate`
 ---| "species:gorilla"
 ---**[SPECIES]**
 ---***
@@ -1146,7 +1146,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:primate`
+---> `species:mammal` `species:primate`
 ---| "species:monkey"
 ---**[SPECIES]**
 ---***
@@ -1154,7 +1154,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:rodent"
 ---**[SPECIES]**
 ---***
@@ -1162,7 +1162,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:rodent`
+---> `species:mammal` `species:rodent`
 ---| "species:beaver"
 ---**[SPECIES]**
 ---***
@@ -1170,7 +1170,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:rodent`
+---> `species:mammal` `species:rodent`
 ---| "species:chipmunk"
 ---**[SPECIES]**
 ---***
@@ -1178,7 +1178,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:rodent`
+---> `species:mammal` `species:rodent`
 ---| "species:hamster"
 ---**[SPECIES]**
 ---***
@@ -1186,7 +1186,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:rodent`
+---> `species:mammal` `species:rodent`
 ---| "species:mouse"
 ---**[SPECIES]**
 ---***
@@ -1194,7 +1194,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:rodent`
+---> `species:mammal` `species:rodent`
 ---| "species:porcupine"
 ---**[SPECIES]**
 ---***
@@ -1202,7 +1202,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:rodent`
+---> `species:mammal` `species:rodent`
 ---| "species:rat"
 ---**[SPECIES]**
 ---***
@@ -1210,7 +1210,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:rodent`
+---> `species:mammal` `species:rodent`
 ---| "species:squirrel"
 ---**[SPECIES]**
 ---***
@@ -1218,7 +1218,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:porcine"
 ---**[SPECIES]**
 ---***
@@ -1226,7 +1226,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:porcine`
+---> `species:mammal` `species:porcine`
 ---| "species:pig"
 ---**[SPECIES]**
 ---***
@@ -1234,7 +1234,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:porcine`
+---> `species:mammal` `species:porcine`
 ---| "species:boar"
 ---**[SPECIES]**
 ---***
@@ -1242,7 +1242,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:porcine`
+---> `species:mammal` `species:porcine`
 ---| "species:warthog"
 ---**[SPECIES]**
 ---***
@@ -1250,7 +1250,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:ursid"
 ---**[SPECIES]**
 ---***
@@ -1258,7 +1258,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:ursid`
+---> `species:mammal` `species:ursid`
 ---| "species:panda"
 ---**[SPECIES]**
 ---***
@@ -1266,7 +1266,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:ursid`
+---> `species:mammal` `species:ursid`
 ---| "species:bear"
 ---**[SPECIES]**
 ---***
@@ -1274,7 +1274,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:armadillo"
 ---**[SPECIES]**
 ---***
@@ -1282,7 +1282,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:bat"
 ---**[SPECIES]**
 ---***
@@ -1290,7 +1290,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:elephant"
 ---**[SPECIES]**
 ---***
@@ -1298,7 +1298,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:giraffe"
 ---**[SPECIES]**
 ---***
@@ -1306,7 +1306,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:hedgehog"
 ---**[SPECIES]**
 ---***
@@ -1314,7 +1314,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:hippopotamus"
 ---**[SPECIES]**
 ---***
@@ -1322,7 +1322,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:human"
 ---**[SPECIES]**
 ---***
@@ -1330,7 +1330,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:hyena"
 ---**[SPECIES]**
 ---***
@@ -1338,7 +1338,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:raccoon"
 ---**[SPECIES]**
 ---***
@@ -1346,7 +1346,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:red_panda"
 ---**[SPECIES]**
 ---***
@@ -1354,7 +1354,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:rhinoceros"
 ---**[SPECIES]**
 ---***
@@ -1362,7 +1362,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:skunk"
 ---**[SPECIES]**
 ---***
@@ -1374,7 +1374,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:gastropod` `species:gastropod`
+---> `species:gastropod`
 ---| "species:slug"
 ---**[SPECIES]**
 ---***
@@ -1382,7 +1382,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:gastropod` `species:gastropod`
+---> `species:gastropod`
 ---| "species:snail"
 ---**[SPECIES]**
 ---***
@@ -1394,7 +1394,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:cephalopod` `species:cephalopod`
+---> `species:cephalopod`
 ---| "species:octopus"
 ---**[SPECIES]**
 ---***
@@ -1402,7 +1402,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:cephalopod` `species:cephalopod` `species:octopus`
+---> `species:cephalopod` `species:octopus`
 ---| "species:octoling"
 ---**[SPECIES]**
 ---***
@@ -1410,7 +1410,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:cephalopod` `species:cephalopod`
+---> `species:cephalopod`
 ---| "species:squid"
 ---**[SPECIES]**
 ---***
@@ -1418,7 +1418,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:cephalopod` `species:cephalopod` `species:squid`
+---> `species:cephalopod` `species:squid`
 ---| "species:inkling"
 ---**[SPECIES]**
 ---***
@@ -1430,7 +1430,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:fish` `species:fish`
+---> `species:fish`
 ---| "species:pufferfish"
 ---**[SPECIES]**
 ---***
@@ -1438,7 +1438,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:fish` `species:fish`
+---> `species:fish`
 ---| "species:shark"
 ---**[SPECIES]**
 ---***
@@ -1450,7 +1450,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile`
+---> `species:reptile`
 ---| "species:alligator"
 ---**[SPECIES]**
 ---***
@@ -1458,7 +1458,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile`
+---> `species:reptile`
 ---| "species:crocodile"
 ---**[SPECIES]**
 ---***
@@ -1466,7 +1466,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile`
+---> `species:reptile`
 ---| "species:dinosaur"
 ---**[SPECIES]**
 ---***
@@ -1474,7 +1474,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile`
+---> `species:reptile`
 ---| "species:lizard"
 ---**[SPECIES]**
 ---***
@@ -1482,7 +1482,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile` `species:lizard`
+---> `species:reptile` `species:lizard`
 ---| "species:chameleon"
 ---**[SPECIES]**
 ---***
@@ -1490,7 +1490,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile` `species:lizard`
+---> `species:reptile` `species:lizard`
 ---| "species:gecko"
 ---**[SPECIES]**
 ---***
@@ -1498,7 +1498,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile` `species:lizard`
+---> `species:reptile` `species:lizard`
 ---| "species:iguana"
 ---**[SPECIES]**
 ---***
@@ -1506,7 +1506,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile`
+---> `species:reptile`
 ---| "species:snake"
 ---**[SPECIES]**
 ---***
@@ -1514,7 +1514,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile` `species:snake`
+---> `species:reptile` `species:snake`
 ---| "species:boa"
 ---**[SPECIES]**
 ---***
@@ -1522,7 +1522,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile` `species:snake`
+---> `species:reptile` `species:snake`
 ---| "species:cobra"
 ---**[SPECIES]**
 ---***
@@ -1530,7 +1530,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile` `species:snake`
+---> `species:reptile` `species:snake`
 ---| "species:python"
 ---**[SPECIES]**
 ---***
@@ -1538,7 +1538,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile` `species:snake`
+---> `species:reptile` `species:snake`
 ---| "species:viper"
 ---**[SPECIES]**
 ---***
@@ -1546,7 +1546,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile`
+---> `species:reptile`
 ---| "species:turtle"
 ---**[SPECIES]**
 ---***
@@ -1554,7 +1554,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile`
+---> `species:reptile`
 ---| "species:tortoise"
 ---**[SPECIES]**
 ---***
@@ -1574,7 +1574,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:dragon` `species:dragon`
+---> `species:dragon`
 ---| "species:eastern_dragon"
 ---**[SPECIES]**
 ---***
@@ -1582,7 +1582,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:dragon` `species:dragon`
+---> `species:dragon`
 ---| "species:ender_dragon"
 ---**[SPECIES]**
 ---***
@@ -1590,7 +1590,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:dragon` `species:dragon`
+---> `species:dragon`
 ---| "species:western_dragon"
 ---**[SPECIES]**
 ---***
@@ -1598,7 +1598,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:dragon` `species:dragon`
+---> `species:dragon`
 ---| "species:wyvern"
 ---**[SPECIES]**
 ---***
@@ -1610,7 +1610,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:bird_wyvern"
 ---**[SPECIES]**
 ---***
@@ -1618,7 +1618,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:brute_wyvern"
 ---**[SPECIES]**
 ---***
@@ -1626,7 +1626,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:elder_dragon"
 ---**[SPECIES]**
 ---***
@@ -1634,7 +1634,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:fanged_wyvern"
 ---**[SPECIES]**
 ---***
@@ -1642,7 +1642,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:flying_wyvern"
 ---**[SPECIES]**
 ---***
@@ -1650,7 +1650,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:piscine_wyvern"
 ---**[SPECIES]**
 ---***
@@ -1658,7 +1658,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:fanged_beast"
 ---**[SPECIES]**
 ---***
@@ -1666,7 +1666,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:snake_wyvern"
 ---**[SPECIES]**
 ---***
@@ -1678,7 +1678,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:lynian` `species:lynian`
+---> `species:lynian`
 ---| "species:felyne"
 ---**[SPECIES]**
 ---***
@@ -1686,7 +1686,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:lynian` `species:lynian` `species:felyne`
+---> `species:lynian` `species:felyne`
 ---| "species:palico"
 ---**[SPECIES]**
 ---***
@@ -1694,7 +1694,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:lynian` `species:lynian`
+---> `species:lynian`
 ---| "species:gajalaka"
 ---**[SPECIES]**
 ---***
@@ -1702,7 +1702,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:lynian` `species:lynian`
+---> `species:lynian`
 ---| "species:grimalkyne"
 ---**[SPECIES]**
 ---***
@@ -1790,7 +1790,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_i"
 ---**[SPECIES]**
 ---***
@@ -1798,7 +1798,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon` `species:gen_i`
+---> `species:pokemon` `species:gen_i`
 ---| "species:lapras"
 ---**[SPECIES]**
 ---***
@@ -1806,7 +1806,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_ii"
 ---**[SPECIES]**
 ---***
@@ -1814,7 +1814,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_iii"
 ---**[SPECIES]**
 ---***
@@ -1822,7 +1822,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_iv"
 ---**[SPECIES]**
 ---***
@@ -1830,7 +1830,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_v"
 ---**[SPECIES]**
 ---***
@@ -1838,7 +1838,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_vi"
 ---**[SPECIES]**
 ---***
@@ -1846,7 +1846,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_vii"
 ---**[SPECIES]**
 ---***
@@ -1854,7 +1854,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_viii"
 ---**[SPECIES]**
 ---***
@@ -1862,7 +1862,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_ix"
 ---**[SPECIES]**
 ---***
@@ -1882,7 +1882,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:sculk` `species:sculk`
+---> `species:sculk`
 ---| "species:warden"
 ---**[SPECIES]**
 ---***
@@ -1902,7 +1902,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:spirit` `species:spirit`
+---> `species:spirit`
 ---| "species:ghost"
 ---**[SPECIES]**
 ---***
@@ -1918,7 +1918,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead`
+---> `species:undead`
 ---| "species:skeleton"
 ---**[SPECIES]**
 ---***
@@ -1926,7 +1926,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead` `species:skeleton`
+---> `species:undead` `species:skeleton`
 ---| "species:stray"
 ---**[SPECIES]**
 ---***
@@ -1934,7 +1934,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead` `species:skeleton`
+---> `species:undead` `species:skeleton`
 ---| "species:wither_skeleton"
 ---**[SPECIES]**
 ---***
@@ -1942,7 +1942,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead`
+---> `species:undead`
 ---| "species:mummy"
 ---**[SPECIES]**
 ---***
@@ -1950,7 +1950,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead`
+---> `species:undead`
 ---| "species:wither"
 ---**[SPECIES]**
 ---***
@@ -1958,7 +1958,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead`
+---> `species:undead`
 ---| "species:zombie"
 ---**[SPECIES]**
 ---***
@@ -1966,7 +1966,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead` `species:zombie`
+---> `species:undead` `species:zombie`
 ---| "species:drowned"
 ---**[SPECIES]**
 ---***
@@ -1974,7 +1974,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead` `species:zombie`
+---> `species:undead` `species:zombie`
 ---| "species:husk"
 ---**[SPECIES]**
 ---***
@@ -1982,7 +1982,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead` `species:zombie`
+---> `species:undead` `species:zombie`
 ---| "species:zombified_piglin"
 ---**[SPECIES]**
 ---***
@@ -2002,7 +2002,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:machine` `species:machine`
+---> `species:machine`
 ---| "species:robot"
 ---**[SPECIES]**
 ---***
@@ -2225,7 +2225,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:amphibian` `species:amphibian`
+---> `species:amphibian`
 ---| "species:frog"
 ---**[SPECIES]**
 ---***
@@ -2233,7 +2233,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:amphibian` `species:amphibian`
+---> `species:amphibian`
 ---| "species:salamander"
 ---**[SPECIES]**
 ---***
@@ -2245,7 +2245,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod`
+---> `species:arthropod`
 ---| "species:arachnid"
 ---**[SPECIES]**
 ---***
@@ -2253,7 +2253,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:arachnid`
+---> `species:arthropod` `species:arachnid`
 ---| "species:scorpion"
 ---**[SPECIES]**
 ---***
@@ -2261,7 +2261,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:arachnid`
+---> `species:arthropod` `species:arachnid`
 ---| "species:spider"
 ---**[SPECIES]**
 ---***
@@ -2269,7 +2269,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod`
+---> `species:arthropod`
 ---| "species:crustacean"
 ---**[SPECIES]**
 ---***
@@ -2277,7 +2277,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:crustacean`
+---> `species:arthropod` `species:crustacean`
 ---| "species:crab"
 ---**[SPECIES]**
 ---***
@@ -2285,7 +2285,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:crustacean`
+---> `species:arthropod` `species:crustacean`
 ---| "species:lobster"
 ---**[SPECIES]**
 ---***
@@ -2293,7 +2293,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:crustacean`
+---> `species:arthropod` `species:crustacean`
 ---| "species:shrimp"
 ---**[SPECIES]**
 ---***
@@ -2301,7 +2301,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod`
+---> `species:arthropod`
 ---| "species:insect"
 ---**[SPECIES]**
 ---***
@@ -2309,7 +2309,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:insect`
+---> `species:arthropod` `species:insect`
 ---| "species:beetle"
 ---**[SPECIES]**
 ---***
@@ -2317,7 +2317,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:insect`
+---> `species:arthropod` `species:insect`
 ---| "species:ant"
 ---**[SPECIES]**
 ---***
@@ -2325,7 +2325,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:insect`
+---> `species:arthropod` `species:insect`
 ---| "species:bee"
 ---**[SPECIES]**
 ---***
@@ -2333,7 +2333,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:insect`
+---> `species:arthropod` `species:insect`
 ---| "species:wasp"
 ---**[SPECIES]**
 ---***
@@ -2341,7 +2341,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:insect`
+---> `species:arthropod` `species:insect`
 ---| "species:butterfly"
 ---**[SPECIES]**
 ---***
@@ -2349,7 +2349,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:arthropod` `species:arthropod` `species:insect`
+---> `species:arthropod` `species:insect`
 ---| "species:moth"
 ---**[SPECIES]**
 ---***
@@ -2361,7 +2361,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian`
+---> `species:avian`
 ---| "species:bird"
 ---**[SPECIES]**
 ---***
@@ -2369,7 +2369,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:hawk"
 ---**[SPECIES]**
 ---***
@@ -2377,7 +2377,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:eagle"
 ---**[SPECIES]**
 ---***
@@ -2385,7 +2385,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:vulture"
 ---**[SPECIES]**
 ---***
@@ -2393,7 +2393,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:goose"
 ---**[SPECIES]**
 ---***
@@ -2401,7 +2401,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:swan"
 ---**[SPECIES]**
 ---***
@@ -2409,7 +2409,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:duck"
 ---**[SPECIES]**
 ---***
@@ -2417,7 +2417,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:dove"
 ---**[SPECIES]**
 ---***
@@ -2425,7 +2425,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:pigeon"
 ---**[SPECIES]**
 ---***
@@ -2433,7 +2433,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:corvid"
 ---**[SPECIES]**
 ---***
@@ -2441,7 +2441,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird` `species:corvid`
+---> `species:avian` `species:bird` `species:corvid`
 ---| "species:crow"
 ---**[SPECIES]**
 ---***
@@ -2449,7 +2449,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird` `species:corvid`
+---> `species:avian` `species:bird` `species:corvid`
 ---| "species:raven"
 ---**[SPECIES]**
 ---***
@@ -2457,7 +2457,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird` `species:corvid`
+---> `species:avian` `species:bird` `species:corvid`
 ---| "species:jay"
 ---**[SPECIES]**
 ---***
@@ -2465,7 +2465,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird` `species:corvid`
+---> `species:avian` `species:bird` `species:corvid`
 ---| "species:corvid_magpie"
 ---**[SPECIES]**
 ---***
@@ -2473,7 +2473,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:falcon"
 ---**[SPECIES]**
 ---***
@@ -2481,7 +2481,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:finch"
 ---**[SPECIES]**
 ---***
@@ -2489,7 +2489,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:flamingo"
 ---**[SPECIES]**
 ---***
@@ -2497,7 +2497,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:chicken"
 ---**[SPECIES]**
 ---***
@@ -2505,7 +2505,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:peafowl"
 ---**[SPECIES]**
 ---***
@@ -2513,7 +2513,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:turkey"
 ---**[SPECIES]**
 ---***
@@ -2521,7 +2521,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:crane"
 ---**[SPECIES]**
 ---***
@@ -2529,7 +2529,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:swallow"
 ---**[SPECIES]**
 ---***
@@ -2537,7 +2537,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:hummingbird"
 ---**[SPECIES]**
 ---***
@@ -2545,7 +2545,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:seagull"
 ---**[SPECIES]**
 ---***
@@ -2553,7 +2553,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:owl"
 ---**[SPECIES]**
 ---***
@@ -2561,7 +2561,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:parrot"
 ---**[SPECIES]**
 ---***
@@ -2569,7 +2569,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird` `species:parrot`
+---> `species:avian` `species:bird` `species:parrot`
 ---| "species:cockatoo"
 ---**[SPECIES]**
 ---***
@@ -2577,7 +2577,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird` `species:parrot`
+---> `species:avian` `species:bird` `species:parrot`
 ---| "species:parakeet"
 ---**[SPECIES]**
 ---***
@@ -2585,7 +2585,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:heron"
 ---**[SPECIES]**
 ---***
@@ -2593,7 +2593,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:pelican"
 ---**[SPECIES]**
 ---***
@@ -2601,7 +2601,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:penguin"
 ---**[SPECIES]**
 ---***
@@ -2609,7 +2609,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:woodpecker"
 ---**[SPECIES]**
 ---***
@@ -2617,7 +2617,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:ostrich"
 ---**[SPECIES]**
 ---***
@@ -2625,7 +2625,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:robin"
 ---**[SPECIES]**
 ---***
@@ -2633,7 +2633,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:stork"
 ---**[SPECIES]**
 ---***
@@ -2641,7 +2641,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:toucan"
 ---**[SPECIES]**
 ---***
@@ -2649,7 +2649,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian` `species:bird`
+---> `species:avian` `species:bird`
 ---| "species:phoenix"
 ---**[SPECIES]**
 ---***
@@ -2657,7 +2657,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian`
+---> `species:avian`
 ---| "species:gryphon"
 ---**[SPECIES]**
 ---***
@@ -2665,7 +2665,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian`
+---> `species:avian`
 ---| "species:harpy"
 ---**[SPECIES]**
 ---***
@@ -2673,7 +2673,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian`
+---> `species:avian`
 ---| "species:avali"
 ---**[SPECIES]**
 ---***
@@ -2681,7 +2681,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:avian` `species:avian`
+---> `species:avian`
 ---| "species:chocobo"
 ---**[SPECIES]**
 ---***
@@ -2693,7 +2693,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:antelope"
 ---**[SPECIES]**
 ---***
@@ -2701,7 +2701,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:antelope`
+---> `species:mammal` `species:antelope`
 ---| "species:gazelle"
 ---**[SPECIES]**
 ---***
@@ -2709,7 +2709,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:bovine"
 ---**[SPECIES]**
 ---***
@@ -2717,7 +2717,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:bovine`
+---> `species:mammal` `species:bovine`
 ---| "species:buffalo"
 ---**[SPECIES]**
 ---***
@@ -2725,7 +2725,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:bovine`
+---> `species:mammal` `species:bovine`
 ---| "species:bison"
 ---**[SPECIES]**
 ---***
@@ -2733,7 +2733,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:bovine`
+---> `species:mammal` `species:bovine`
 ---| "species:cow"
 ---**[SPECIES]**
 ---***
@@ -2741,7 +2741,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:canine"
 ---**[SPECIES]**
 ---***
@@ -2749,7 +2749,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine`
+---> `species:mammal` `species:canine`
 ---| "species:coyote"
 ---**[SPECIES]**
 ---***
@@ -2757,7 +2757,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine`
+---> `species:mammal` `species:canine`
 ---| "species:dog"
 ---**[SPECIES]**
 ---***
@@ -2765,7 +2765,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine`
+---> `species:mammal` `species:canine`
 ---| "species:fox"
 ---**[SPECIES]**
 ---***
@@ -2773,7 +2773,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine`
+---> `species:mammal` `species:canine`
 ---| "species:jackal"
 ---**[SPECIES]**
 ---***
@@ -2781,7 +2781,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine` `species:jackal`
+---> `species:mammal` `species:canine` `species:jackal`
 ---| "species:anubian_jackal"
 ---**[SPECIES]**
 ---***
@@ -2789,7 +2789,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine`
+---> `species:mammal` `species:canine`
 ---| "species:tanuki"
 ---**[SPECIES]**
 ---***
@@ -2797,7 +2797,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine`
+---> `species:mammal` `species:canine`
 ---| "species:wolf"
 ---**[SPECIES]**
 ---***
@@ -2805,7 +2805,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:canine`
+---> `species:mammal` `species:canine`
 ---| "species:cerberus"
 ---**[SPECIES]**
 ---***
@@ -2813,7 +2813,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:camelid"
 ---**[SPECIES]**
 ---***
@@ -2821,7 +2821,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:camelid`
+---> `species:mammal` `species:camelid`
 ---| "species:alpaca"
 ---**[SPECIES]**
 ---***
@@ -2829,7 +2829,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:camelid`
+---> `species:mammal` `species:camelid`
 ---| "species:camel"
 ---**[SPECIES]**
 ---***
@@ -2837,7 +2837,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:camelid`
+---> `species:mammal` `species:camelid`
 ---| "species:llama"
 ---**[SPECIES]**
 ---***
@@ -2845,7 +2845,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:caprine"
 ---**[SPECIES]**
 ---***
@@ -2853,7 +2853,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:caprine`
+---> `species:mammal` `species:caprine`
 ---| "species:goat"
 ---**[SPECIES]**
 ---***
@@ -2861,7 +2861,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:caprine`
+---> `species:mammal` `species:caprine`
 ---| "species:sheep"
 ---**[SPECIES]**
 ---***
@@ -2869,7 +2869,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:cervine"
 ---**[SPECIES]**
 ---***
@@ -2877,7 +2877,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:cervine`
+---> `species:mammal` `species:cervine`
 ---| "species:deer"
 ---**[SPECIES]**
 ---***
@@ -2885,7 +2885,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:cervine`
+---> `species:mammal` `species:cervine`
 ---| "species:elk"
 ---**[SPECIES]**
 ---***
@@ -2893,7 +2893,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:cervine`
+---> `species:mammal` `species:cervine`
 ---| "species:moose"
 ---**[SPECIES]**
 ---***
@@ -2901,7 +2901,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:cervine`
+---> `species:mammal` `species:cervine`
 ---| "species:reindeer"
 ---**[SPECIES]**
 ---***
@@ -2961,7 +2961,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:feline"
 ---**[SPECIES]**
 ---***
@@ -2969,7 +2969,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:feline`
+---> `species:mammal` `species:feline`
 ---| "species:cougar"
 ---**[SPECIES]**
 ---***
@@ -2977,7 +2977,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:feline`
+---> `species:mammal` `species:feline`
 ---| "species:lynx"
 ---**[SPECIES]**
 ---***
@@ -2985,7 +2985,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:feline`
+---> `species:mammal` `species:feline`
 ---| "species:ocelot"
 ---**[SPECIES]**
 ---***
@@ -2993,7 +2993,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:feline`
+---> `species:mammal` `species:feline`
 ---| "species:cheetah"
 ---**[SPECIES]**
 ---***
@@ -3001,7 +3001,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:feline`
+---> `species:mammal` `species:feline`
 ---| "species:cat"
 ---**[SPECIES]**
 ---***
@@ -3009,7 +3009,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:pantherine"
 ---**[SPECIES]**
 ---***
@@ -3017,7 +3017,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:pantherine`
+---> `species:mammal` `species:pantherine`
 ---| "species:jaguar"
 ---**[SPECIES]**
 ---***
@@ -3025,7 +3025,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:pantherine`
+---> `species:mammal` `species:pantherine`
 ---| "species:leopard"
 ---**[SPECIES]**
 ---***
@@ -3033,7 +3033,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:pantherine`
+---> `species:mammal` `species:pantherine`
 ---| "species:lion"
 ---**[SPECIES]**
 ---***
@@ -3041,7 +3041,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:pantherine`
+---> `species:mammal` `species:pantherine`
 ---| "species:tiger"
 ---**[SPECIES]**
 ---***
@@ -3049,7 +3049,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:lagomorph"
 ---**[SPECIES]**
 ---***
@@ -3057,7 +3057,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:lagomorph`
+---> `species:mammal` `species:lagomorph`
 ---| "species:hare"
 ---**[SPECIES]**
 ---***
@@ -3065,7 +3065,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:lagomorph`
+---> `species:mammal` `species:lagomorph`
 ---| "species:rabbit"
 ---**[SPECIES]**
 ---***
@@ -3073,7 +3073,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:lagomorph`
+---> `species:mammal` `species:lagomorph`
 ---| "species:jackalope"
 ---**[SPECIES]**
 ---***
@@ -3081,7 +3081,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:cetacean"
 ---**[SPECIES]**
 ---***
@@ -3089,7 +3089,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:cetacean`
+---> `species:mammal` `species:cetacean`
 ---| "species:dolphin"
 ---**[SPECIES]**
 ---***
@@ -3097,7 +3097,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:cetacean`
+---> `species:mammal` `species:cetacean`
 ---| "species:whale"
 ---**[SPECIES]**
 ---***
@@ -3105,7 +3105,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:pinniped"
 ---**[SPECIES]**
 ---***
@@ -3113,7 +3113,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:pinniped`
+---> `species:mammal` `species:pinniped`
 ---| "species:sea_lion"
 ---**[SPECIES]**
 ---***
@@ -3121,7 +3121,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:pinniped`
+---> `species:mammal` `species:pinniped`
 ---| "species:seal"
 ---**[SPECIES]**
 ---***
@@ -3129,7 +3129,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:pinniped`
+---> `species:mammal` `species:pinniped`
 ---| "species:walrus"
 ---**[SPECIES]**
 ---***
@@ -3137,7 +3137,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:marsupial"
 ---**[SPECIES]**
 ---***
@@ -3145,7 +3145,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:marsupial`
+---> `species:mammal` `species:marsupial`
 ---| "species:kangaroo"
 ---**[SPECIES]**
 ---***
@@ -3153,7 +3153,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:marsupial`
+---> `species:mammal` `species:marsupial`
 ---| "species:koala"
 ---**[SPECIES]**
 ---***
@@ -3161,7 +3161,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:marsupial`
+---> `species:mammal` `species:marsupial`
 ---| "species:opossum"
 ---**[SPECIES]**
 ---***
@@ -3169,7 +3169,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:echidna"
 ---**[SPECIES]**
 ---***
@@ -3177,7 +3177,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:platypus"
 ---**[SPECIES]**
 ---***
@@ -3185,7 +3185,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:mustelid"
 ---**[SPECIES]**
 ---***
@@ -3193,7 +3193,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:mustelid`
+---> `species:mammal` `species:mustelid`
 ---| "species:badger"
 ---**[SPECIES]**
 ---***
@@ -3201,7 +3201,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:mustelid`
+---> `species:mammal` `species:mustelid`
 ---| "species:ferret"
 ---**[SPECIES]**
 ---***
@@ -3209,7 +3209,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:mustelid`
+---> `species:mammal` `species:mustelid`
 ---| "species:otter"
 ---**[SPECIES]**
 ---***
@@ -3217,7 +3217,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:mustelid`
+---> `species:mammal` `species:mustelid`
 ---| "species:weasel"
 ---**[SPECIES]**
 ---***
@@ -3225,7 +3225,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:primate"
 ---**[SPECIES]**
 ---***
@@ -3233,7 +3233,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:primate`
+---> `species:mammal` `species:primate`
 ---| "species:ape"
 ---**[SPECIES]**
 ---***
@@ -3241,7 +3241,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:primate`
+---> `species:mammal` `species:primate`
 ---| "species:gorilla"
 ---**[SPECIES]**
 ---***
@@ -3249,7 +3249,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:primate`
+---> `species:mammal` `species:primate`
 ---| "species:monkey"
 ---**[SPECIES]**
 ---***
@@ -3257,7 +3257,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:rodent"
 ---**[SPECIES]**
 ---***
@@ -3265,7 +3265,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:rodent`
+---> `species:mammal` `species:rodent`
 ---| "species:beaver"
 ---**[SPECIES]**
 ---***
@@ -3273,7 +3273,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:rodent`
+---> `species:mammal` `species:rodent`
 ---| "species:chipmunk"
 ---**[SPECIES]**
 ---***
@@ -3281,7 +3281,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:rodent`
+---> `species:mammal` `species:rodent`
 ---| "species:hamster"
 ---**[SPECIES]**
 ---***
@@ -3289,7 +3289,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:rodent`
+---> `species:mammal` `species:rodent`
 ---| "species:mouse"
 ---**[SPECIES]**
 ---***
@@ -3297,7 +3297,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:rodent`
+---> `species:mammal` `species:rodent`
 ---| "species:porcupine"
 ---**[SPECIES]**
 ---***
@@ -3305,7 +3305,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:rodent`
+---> `species:mammal` `species:rodent`
 ---| "species:rat"
 ---**[SPECIES]**
 ---***
@@ -3313,7 +3313,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:rodent`
+---> `species:mammal` `species:rodent`
 ---| "species:squirrel"
 ---**[SPECIES]**
 ---***
@@ -3321,7 +3321,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:porcine"
 ---**[SPECIES]**
 ---***
@@ -3329,7 +3329,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:porcine`
+---> `species:mammal` `species:porcine`
 ---| "species:pig"
 ---**[SPECIES]**
 ---***
@@ -3337,7 +3337,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:porcine`
+---> `species:mammal` `species:porcine`
 ---| "species:boar"
 ---**[SPECIES]**
 ---***
@@ -3345,7 +3345,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:porcine`
+---> `species:mammal` `species:porcine`
 ---| "species:warthog"
 ---**[SPECIES]**
 ---***
@@ -3353,7 +3353,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:ursid"
 ---**[SPECIES]**
 ---***
@@ -3361,7 +3361,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:ursid`
+---> `species:mammal` `species:ursid`
 ---| "species:panda"
 ---**[SPECIES]**
 ---***
@@ -3369,7 +3369,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal` `species:ursid`
+---> `species:mammal` `species:ursid`
 ---| "species:bear"
 ---**[SPECIES]**
 ---***
@@ -3377,7 +3377,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:armadillo"
 ---**[SPECIES]**
 ---***
@@ -3385,7 +3385,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:bat"
 ---**[SPECIES]**
 ---***
@@ -3393,7 +3393,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:elephant"
 ---**[SPECIES]**
 ---***
@@ -3401,7 +3401,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:giraffe"
 ---**[SPECIES]**
 ---***
@@ -3409,7 +3409,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:hedgehog"
 ---**[SPECIES]**
 ---***
@@ -3417,7 +3417,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:hippopotamus"
 ---**[SPECIES]**
 ---***
@@ -3425,7 +3425,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:human"
 ---**[SPECIES]**
 ---***
@@ -3433,7 +3433,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:hyena"
 ---**[SPECIES]**
 ---***
@@ -3441,7 +3441,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:raccoon"
 ---**[SPECIES]**
 ---***
@@ -3449,7 +3449,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:red_panda"
 ---**[SPECIES]**
 ---***
@@ -3457,7 +3457,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:rhinoceros"
 ---**[SPECIES]**
 ---***
@@ -3465,7 +3465,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:mammal` `species:mammal`
+---> `species:mammal`
 ---| "species:skunk"
 ---**[SPECIES]**
 ---***
@@ -3477,7 +3477,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:gastropod` `species:gastropod`
+---> `species:gastropod`
 ---| "species:slug"
 ---**[SPECIES]**
 ---***
@@ -3485,7 +3485,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:gastropod` `species:gastropod`
+---> `species:gastropod`
 ---| "species:snail"
 ---**[SPECIES]**
 ---***
@@ -3497,7 +3497,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:cephalopod` `species:cephalopod`
+---> `species:cephalopod`
 ---| "species:octopus"
 ---**[SPECIES]**
 ---***
@@ -3505,7 +3505,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:cephalopod` `species:cephalopod` `species:octopus`
+---> `species:cephalopod` `species:octopus`
 ---| "species:octoling"
 ---**[SPECIES]**
 ---***
@@ -3513,7 +3513,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:cephalopod` `species:cephalopod`
+---> `species:cephalopod`
 ---| "species:squid"
 ---**[SPECIES]**
 ---***
@@ -3521,7 +3521,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:cephalopod` `species:cephalopod` `species:squid`
+---> `species:cephalopod` `species:squid`
 ---| "species:inkling"
 ---**[SPECIES]**
 ---***
@@ -3533,7 +3533,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:fish` `species:fish`
+---> `species:fish`
 ---| "species:pufferfish"
 ---**[SPECIES]**
 ---***
@@ -3541,7 +3541,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:fish` `species:fish`
+---> `species:fish`
 ---| "species:shark"
 ---**[SPECIES]**
 ---***
@@ -3553,7 +3553,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile`
+---> `species:reptile`
 ---| "species:alligator"
 ---**[SPECIES]**
 ---***
@@ -3561,7 +3561,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile`
+---> `species:reptile`
 ---| "species:crocodile"
 ---**[SPECIES]**
 ---***
@@ -3569,7 +3569,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile`
+---> `species:reptile`
 ---| "species:dinosaur"
 ---**[SPECIES]**
 ---***
@@ -3577,7 +3577,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile`
+---> `species:reptile`
 ---| "species:lizard"
 ---**[SPECIES]**
 ---***
@@ -3585,7 +3585,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile` `species:lizard`
+---> `species:reptile` `species:lizard`
 ---| "species:chameleon"
 ---**[SPECIES]**
 ---***
@@ -3593,7 +3593,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile` `species:lizard`
+---> `species:reptile` `species:lizard`
 ---| "species:gecko"
 ---**[SPECIES]**
 ---***
@@ -3601,7 +3601,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile` `species:lizard`
+---> `species:reptile` `species:lizard`
 ---| "species:iguana"
 ---**[SPECIES]**
 ---***
@@ -3609,7 +3609,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile`
+---> `species:reptile`
 ---| "species:snake"
 ---**[SPECIES]**
 ---***
@@ -3617,7 +3617,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile` `species:snake`
+---> `species:reptile` `species:snake`
 ---| "species:boa"
 ---**[SPECIES]**
 ---***
@@ -3625,7 +3625,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile` `species:snake`
+---> `species:reptile` `species:snake`
 ---| "species:cobra"
 ---**[SPECIES]**
 ---***
@@ -3633,7 +3633,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile` `species:snake`
+---> `species:reptile` `species:snake`
 ---| "species:python"
 ---**[SPECIES]**
 ---***
@@ -3641,7 +3641,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile` `species:snake`
+---> `species:reptile` `species:snake`
 ---| "species:viper"
 ---**[SPECIES]**
 ---***
@@ -3649,7 +3649,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile`
+---> `species:reptile`
 ---| "species:turtle"
 ---**[SPECIES]**
 ---***
@@ -3657,7 +3657,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:reptile` `species:reptile`
+---> `species:reptile`
 ---| "species:tortoise"
 ---**[SPECIES]**
 ---***
@@ -3677,7 +3677,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:dragon` `species:dragon`
+---> `species:dragon`
 ---| "species:eastern_dragon"
 ---**[SPECIES]**
 ---***
@@ -3685,7 +3685,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:dragon` `species:dragon`
+---> `species:dragon`
 ---| "species:ender_dragon"
 ---**[SPECIES]**
 ---***
@@ -3693,7 +3693,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:dragon` `species:dragon`
+---> `species:dragon`
 ---| "species:western_dragon"
 ---**[SPECIES]**
 ---***
@@ -3701,7 +3701,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:dragon` `species:dragon`
+---> `species:dragon`
 ---| "species:wyvern"
 ---**[SPECIES]**
 ---***
@@ -3713,7 +3713,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:bird_wyvern"
 ---**[SPECIES]**
 ---***
@@ -3721,7 +3721,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:brute_wyvern"
 ---**[SPECIES]**
 ---***
@@ -3729,7 +3729,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:elder_dragon"
 ---**[SPECIES]**
 ---***
@@ -3737,7 +3737,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:fanged_wyvern"
 ---**[SPECIES]**
 ---***
@@ -3745,7 +3745,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:flying_wyvern"
 ---**[SPECIES]**
 ---***
@@ -3753,7 +3753,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:piscine_wyvern"
 ---**[SPECIES]**
 ---***
@@ -3761,7 +3761,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:fanged_beast"
 ---**[SPECIES]**
 ---***
@@ -3769,7 +3769,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:monster_hunter_monster` `species:monster_hunter_monster`
+---> `species:monster_hunter_monster`
 ---| "species:snake_wyvern"
 ---**[SPECIES]**
 ---***
@@ -3781,7 +3781,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:lynian` `species:lynian`
+---> `species:lynian`
 ---| "species:felyne"
 ---**[SPECIES]**
 ---***
@@ -3789,7 +3789,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:lynian` `species:lynian` `species:felyne`
+---> `species:lynian` `species:felyne`
 ---| "species:palico"
 ---**[SPECIES]**
 ---***
@@ -3797,7 +3797,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:lynian` `species:lynian`
+---> `species:lynian`
 ---| "species:gajalaka"
 ---**[SPECIES]**
 ---***
@@ -3805,7 +3805,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:lynian` `species:lynian`
+---> `species:lynian`
 ---| "species:grimalkyne"
 ---**[SPECIES]**
 ---***
@@ -3893,7 +3893,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_i"
 ---**[SPECIES]**
 ---***
@@ -3901,7 +3901,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon` `species:gen_i`
+---> `species:pokemon` `species:gen_i`
 ---| "species:lapras"
 ---**[SPECIES]**
 ---***
@@ -3909,7 +3909,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_ii"
 ---**[SPECIES]**
 ---***
@@ -3917,7 +3917,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_iii"
 ---**[SPECIES]**
 ---***
@@ -3925,7 +3925,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_iv"
 ---**[SPECIES]**
 ---***
@@ -3933,7 +3933,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_v"
 ---**[SPECIES]**
 ---***
@@ -3941,7 +3941,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_vi"
 ---**[SPECIES]**
 ---***
@@ -3949,7 +3949,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_vii"
 ---**[SPECIES]**
 ---***
@@ -3957,7 +3957,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_viii"
 ---**[SPECIES]**
 ---***
@@ -3965,7 +3965,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:pokemon` `species:pokemon`
+---> `species:pokemon`
 ---| "species:gen_ix"
 ---**[SPECIES]**
 ---***
@@ -3985,7 +3985,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:sculk` `species:sculk`
+---> `species:sculk`
 ---| "species:warden"
 ---**[SPECIES]**
 ---***
@@ -4005,7 +4005,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:spirit` `species:spirit`
+---> `species:spirit`
 ---| "species:ghost"
 ---**[SPECIES]**
 ---***
@@ -4021,7 +4021,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead`
+---> `species:undead`
 ---| "species:skeleton"
 ---**[SPECIES]**
 ---***
@@ -4029,7 +4029,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead` `species:skeleton`
+---> `species:undead` `species:skeleton`
 ---| "species:stray"
 ---**[SPECIES]**
 ---***
@@ -4037,7 +4037,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead` `species:skeleton`
+---> `species:undead` `species:skeleton`
 ---| "species:wither_skeleton"
 ---**[SPECIES]**
 ---***
@@ -4045,7 +4045,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead`
+---> `species:undead`
 ---| "species:mummy"
 ---**[SPECIES]**
 ---***
@@ -4053,7 +4053,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead`
+---> `species:undead`
 ---| "species:wither"
 ---**[SPECIES]**
 ---***
@@ -4061,7 +4061,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead`
+---> `species:undead`
 ---| "species:zombie"
 ---**[SPECIES]**
 ---***
@@ -4069,7 +4069,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead` `species:zombie`
+---> `species:undead` `species:zombie`
 ---| "species:drowned"
 ---**[SPECIES]**
 ---***
@@ -4077,7 +4077,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead` `species:zombie`
+---> `species:undead` `species:zombie`
 ---| "species:husk"
 ---**[SPECIES]**
 ---***
@@ -4085,7 +4085,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:undead` `species:undead` `species:zombie`
+---> `species:undead` `species:zombie`
 ---| "species:zombified_piglin"
 ---**[SPECIES]**
 ---***
@@ -4105,7 +4105,7 @@ error(
 ---
 ---&nbsp;  
 ---*Implies:*
----> `species:machine` `species:machine`
+---> `species:machine`
 ---| "species:robot"
 ---**[SPECIES]**
 ---***

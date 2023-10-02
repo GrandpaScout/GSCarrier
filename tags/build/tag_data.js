@@ -1469,6 +1469,12 @@ module.exports = {
     `,
     implies: ["species:pokemon"]
   },
+  "species:shiny_pokemon": {
+    desc: `
+      This avatar is a shiny pokemon or has features of one.
+    `,
+    implies: ["species:pokemon"]
+  },
   "species:rexouium": {
     desc: `
       This avatar is a rexouium or has features of one.

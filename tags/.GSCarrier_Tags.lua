@@ -1866,6 +1866,14 @@ error(
 ---| "species:gen_ix"
 ---**[SPECIES]**
 ---***
+---This avatar is a shiny pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon`
+---| "species:shiny_pokemon"
+---**[SPECIES]**
+---***
 ---This avatar is a rexouium or has features of one.
 ---| "species:rexouium"
 ---**[SPECIES]**
@@ -3967,6 +3975,14 @@ error(
 ---*Implies:*
 ---> `species:pokemon`
 ---| "species:gen_ix"
+---**[SPECIES]**
+---***
+---This avatar is a shiny pokemon or has features of one.
+---
+---&nbsp;  
+---*Implies:*
+---> `species:pokemon`
+---| "species:shiny_pokemon"
 ---**[SPECIES]**
 ---***
 ---This avatar is a rexouium or has features of one.

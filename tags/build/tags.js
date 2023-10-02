@@ -274,6 +274,7 @@ const species_tags = [
     "species:gen_vii",
     "species:gen_viii",
     "species:gen_ix",
+    "species:shiny_pokemon",
   "species:rexouium",
   "species:satyr",
   "species:sculk",

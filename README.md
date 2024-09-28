@@ -10,7 +10,7 @@ a time and passengers in vehicles you are controlling.
 > **AN UPDATE FOLLOWING `1.0.0` MAY REMOVE TAGS COMPLETELY IN PLACE OF A NEW SYSTEM!**
 
 
-## Intallation
+## Installation
 
 To install this library, download this repository and pick a folder in the `script` folder.
 * `script/both`: Contains code for creating a Carrier vehicle and a Carrier rider.  
